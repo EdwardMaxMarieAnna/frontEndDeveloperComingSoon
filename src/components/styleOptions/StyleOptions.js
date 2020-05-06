@@ -70,7 +70,10 @@ export class StyleOptions extends Component {
 
     handleResetClick = (event) => {
         event.preventDefault();
-        
+        console.log(this);
+
+        //reseting form
+        document.getElementById('optionsForm').reset();
         //clear state
         this.setState({
             color: '',
@@ -88,11 +91,11 @@ export class StyleOptions extends Component {
                 {/* this is option for for our font selection */}
                 {/* first five fonts from this article DO WE NEED MORE? IF SO PLEASE ADD 
                 https://www.awwwards.com/20-best-web-fonts-from-google-web-fonts-and-font-face.html*/}
-                <form action="">
+                <form action="" id="optionsForm">
                     <label htmlFor="fonts">Select your font</label>
                     {/* listening for changes */}
                     <select onChange={this.handleChangeFont} name="fonts" id="">
-                        <option value="empty"></option>
+                        <option defaultChecked="checked" value="empty"></option>
                         <option value="alegreya">Algreya</option>
                         <option value="B612">B612</option>
                         <option value="muli">Muli</option>
@@ -119,7 +122,8 @@ export class StyleOptions extends Component {
                     </select>
 
                     {/* reset button NEEDS STYLE */}
-                    <button onClick={this.handleResetClick} type="reset">RESET</button>
+                    {/* <button onClick={this.handleResetClick} type="reset">RESET</button> */}
+                    <input onClick={this.handleResetClick} type="reset" value="Reset"/>
                 </form>
 
                 <div>
