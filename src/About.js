@@ -17,8 +17,7 @@ class About extends Component {
     }
 
     onSubmit = (event) => {
-
-        //prevent default page refresh!
+        //prevent default page refresh
         event.preventDefault();
         console.log("you submitted!")
 
@@ -101,7 +100,6 @@ class About extends Component {
                     </div>
 
                 </form>
-
             </div>
         )
     }
