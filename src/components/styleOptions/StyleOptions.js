@@ -12,22 +12,20 @@ export class StyleOptions extends Component {
             backgroundSelected: '',
             font: ''
         };
-        //this is to make callb functions work functions work 
+        //this is to make call b functions work
         this.handleChangeColor = this.handleChangeColor.bind(this);
-        this.handleChangeFont = this.handleChangeColor.bind(this);
+        this.handleChangeFont = this.handleChangeFont.bind(this);
         this.handleClick = this.handleClick.bind(this);
     }
     
-    //CAUSING ERROR BECAUSE IT'S SENDING REQUEST ON PAGE LOAD...
-    //ALSO I FORGOT HOW TO FIX THAT INDEX ERROR PLEASE HELPÅ
-    componentDidMount(query) {
+    bringMyImage(query) {
         axios({
             method: 'GET',
             url: `https://api.unsplash.com/search/photos`,
             params: {
                 client_id: 'g3jquKzMkhtk1NzZNPnL2KdDiLUCymPJ0y581-d5H9Y',
                 // this one I am not fully happy about, it brings really general results.. so maybe SOMEONE CAN LOOK WHAT KIND OF QUERY WHOULF BRING US THE BEST RESULTS
-                // there are bunch of collections we can search for, it's addible parametr as we
+                // there are bunch of collections we can search for, it's addible parametr
                 query: 'landing-page-backgrounds',
                 color: `${query}`
             }
@@ -44,7 +42,7 @@ export class StyleOptions extends Component {
         event.preventDefault();
         const usersColor = event.target.value;
         console.log(usersColor);
-        this.componentDidMount(usersColor);
+        this.bringMyImage(usersColor);
 
         this.setState({
             color: usersColor
