@@ -19,7 +19,7 @@ export class StyleOptions extends Component {
         this.handleResetClick = this.handleResetClick.bind(this);
     }
     
-    bringMyImage(query) {
+    bringImages(query) {
         axios({
             method: 'GET',
             url: `https://api.unsplash.com/search/photos`,
@@ -43,8 +43,8 @@ export class StyleOptions extends Component {
         event.preventDefault();
         const usersColor = event.target.value;
         console.log(usersColor);
-        this.bringMyImage(usersColor);
-
+        this.bringImages(usersColor);
+        
         this.setState({
             color: usersColor
         })
@@ -58,11 +58,11 @@ export class StyleOptions extends Component {
             font: event.target.value
         })
     }
-
-    handleImageClick = (event) => {
+    
+    handleImageClick = (event, key) => {
         event.preventDefault();
         console.log(event.target.id)
-
+        
         this.setState({
             backgroundSelected: event.target.id
         })
@@ -73,7 +73,7 @@ export class StyleOptions extends Component {
         console.log(this);
 
         //reseting form
-        document.getElementById('optionsForm').reset();
+        document.getElementById('stylesForm').reset();
         //clear state
         this.setState({
             color: '',
@@ -83,6 +83,8 @@ export class StyleOptions extends Component {
         })
     }
 
+
+
     render() {
         return (
             <div style={style}>
@@ -91,7 +93,7 @@ export class StyleOptions extends Component {
                 {/* this is option for for our font selection */}
                 {/* first five fonts from this article DO WE NEED MORE? IF SO PLEASE ADD 
                 https://www.awwwards.com/20-best-web-fonts-from-google-web-fonts-and-font-face.html*/}
-                <form action="" id="optionsForm">
+                <form action="" id="stylesForm">
                     <label htmlFor="fonts">Select your font</label>
                     {/* listening for changes */}
                     <select onChange={this.handleChangeFont} name="fonts" id="">
@@ -120,6 +122,7 @@ export class StyleOptions extends Component {
                         <option value="teal">Teal</option>
                         <option value="blue">Blue</option>
                     </select>
+                    
 
                     {/* reset button NEEDS STYLE */}
                     {/* <button onClick={this.handleResetClick} type="reset">RESET</button> */}
@@ -130,10 +133,14 @@ export class StyleOptions extends Component {
                     {this.state.background.map((image) => {
                         return(
                             // console.log(image.urls.small)
-                            //there are bunch of other options to select check console log on line 31 WE CAN CHANGE STYLING EASILY
-                            <figure onClick={this.handleImageClick}>
-                                < img id={`${image.id}`} src = {`${image.urls.small}`} alt=""/>
-                            </figure>
+                            // there are bunch of other options to select check console log on line 31
+                            < img
+                                onClick={this.handleImageClick} 
+                                key={`${image.id}`} 
+                                id={`${image.id}`}
+                                src = {`${image.urls.small}`} 
+                                alt={`${image.alt_description}`}
+                            />
                         )
                     })}
                 </div>
