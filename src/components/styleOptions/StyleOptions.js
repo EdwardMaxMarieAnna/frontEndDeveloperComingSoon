@@ -15,7 +15,8 @@ export class StyleOptions extends Component {
         //this is to make call b functions work
         this.handleChangeColor = this.handleChangeColor.bind(this);
         this.handleChangeFont = this.handleChangeFont.bind(this);
-        this.handleClick = this.handleClick.bind(this);
+        this.handleImageClick = this.handleImageClick.bind(this);
+        this.handleResetClick = this.handleResetClick.bind(this);
     }
     
     bringMyImage(query) {
@@ -51,19 +52,31 @@ export class StyleOptions extends Component {
 
     handleChangeFont = (event) => {
         event.preventDefault();
-        const usersFont = event.target.value;
         console.log(event.target.value)
 
         this.setState({
-            font: usersFont
+            font: event.target.value
         })
     }
 
-    handleClick = (event) => {
+    handleImageClick = (event) => {
         event.preventDefault();
         console.log(event.target.id)
+
         this.setState({
             backgroundSelected: event.target.id
+        })
+    }
+
+    handleResetClick = (event) => {
+        event.preventDefault();
+        
+        //clear state
+        this.setState({
+            color: '',
+            background: [],
+            backgroundSelected: '',
+            font: ''
         })
     }
 
@@ -86,10 +99,7 @@ export class StyleOptions extends Component {
                         <option value="titillium">Titillium Web</option>
                         <option value="varela">Varela</ option>
                     </select>
-                </form>
 
-            {/* this is option form for our color selection */}
-                <form action="">
                     <label htmlFor="chooseColor">Select your color</label>
                     {/* every time user passes changes handleChange function activates */}
                     <select onChange={this.handleChangeColor} name="color" id="color">
@@ -107,18 +117,23 @@ export class StyleOptions extends Component {
                         <option value="teal">Teal</option>
                         <option value="blue">Blue</option>
                     </select>
+
+                    {/* reset button NEEDS STYLE */}
+                    <button onClick={this.handleResetClick} type="reset">RESET</button>
                 </form>
+
                 <div>
                     {this.state.background.map((image) => {
                         return(
                             // console.log(image.urls.small)
-                            //there are bunch of other options to select check console log on line 31 CAN SOMEONE MAKE A DECIOSION OF WHAT'S BETTER LOOKIN OPTION SIZE WISE AND STYLE IT? 
-                            <figure onClick={this.handleClick}>
+                            //there are bunch of other options to select check console log on line 31 WE CAN CHANGE STYLING EASILY
+                            <figure onClick={this.handleImageClick}>
                                 < img id={`${image.id}`} src = {`${image.urls.small}`} alt=""/>
                             </figure>
                         )
                     })}
                 </div>
+
             </div>
         )
     }
