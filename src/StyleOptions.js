@@ -25,8 +25,6 @@ export class StyleOptions extends Component {
             url: `https://api.unsplash.com/search/photos`,
             params: {
                 client_id: 'g3jquKzMkhtk1NzZNPnL2KdDiLUCymPJ0y581-d5H9Y',
-                // this one I am not fully happy about, it brings really general results.. so maybe SOMEONE CAN LOOK WHAT KIND OF QUERY WHOULF BRING US THE BEST RESULTS
-                // there are bunch of collections we can search for, it's addible parametr
                 query: 'landing-page-background',
                 color: `${query}`
             }
