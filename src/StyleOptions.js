@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+//hiding api hehehehe
+const API_KEY = process.env.REACT_APP_UNSPLASH_API_KEY;
+
 export class StyleOptions extends Component {
     constructor() {
         super()
@@ -24,7 +27,7 @@ export class StyleOptions extends Component {
             method: 'GET',
             url: `https://api.unsplash.com/search/photos`,
             params: {
-                client_id: 'g3jquKzMkhtk1NzZNPnL2KdDiLUCymPJ0y581-d5H9Y',
+                client_id: API_KEY,
                 query: 'landing-page-background',
                 color: `${query}`
             }
