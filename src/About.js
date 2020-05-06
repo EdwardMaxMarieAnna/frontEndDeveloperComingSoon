@@ -38,10 +38,10 @@ class About extends Component {
     handleOnChange = (event) => {
         // console.log(event.target.value);
         // setting the name and val to their own variables allows us to set them to their own states without having to write multiple setStates for each form input.
-        let nam = event.target.name
+        let inputName = event.target.name
         let val = event.target.value
         this.setState({
-            [nam]: val
+            [inputName]: val
         })
     }
 
