@@ -34,6 +34,7 @@ class About extends Component {
         })
     }
 
+
     //below is to test simplified data collection. By setting nam in an array we can take the val of any input. Saving that to a unique state is the part I so far can't figure out.
     handleOnChange = (event) => {
         // console.log(event.target.value);
