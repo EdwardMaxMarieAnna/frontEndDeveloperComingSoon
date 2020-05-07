@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Preview from './Preview.js'
+
 import About from "../../About";
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
