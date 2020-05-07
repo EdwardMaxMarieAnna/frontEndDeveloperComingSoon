@@ -48,7 +48,10 @@ export class StyleOptions extends Component {
         
         //saving to state
         this.setState({
-            color: usersColor
+            color: usersColor,
+            background: this.state.background,
+            backgroundSelected: this.state.backgroundSelected,
+            font: this.state.font
         })
 
         //passing color and page# to bringImages
@@ -60,6 +63,9 @@ export class StyleOptions extends Component {
         event.preventDefault();
 
         this.setState({
+            color: this.state.color,
+            background: this.state.background,
+            backgroundSelected: this.state.backgroundSelected,
             font: event.target.value
         })
     }
@@ -67,7 +73,10 @@ export class StyleOptions extends Component {
     handleImageClick = (event) => {
         event.preventDefault();
         this.setState({
-            backgroundSelected: event.target.src
+            color: this.state.color,
+            background: this.state.background,
+            backgroundSelected: event.target.src,
+            font: this.state.backgroundSelected
         })
     }
 

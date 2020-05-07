@@ -20,6 +20,7 @@ class About extends Component {
         //prevent default page refresh
         event.preventDefault();
         console.log("you submitted!")
+        console.log(this.state.firstName, this.state.lastName, this.state.subtitle)
 
         //empting states after submission and other code is done using them (so it doesn't sit in form boxes)
         this.setState({
