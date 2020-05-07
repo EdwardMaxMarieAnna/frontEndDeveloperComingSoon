@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import About from "../../About";
+import StyleOptions from "../../StyleOptions.js"
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
@@ -12,12 +13,12 @@ class Form extends Component {
         <h2>This is a Form</h2>
         <About />
         <nav>
-            {/* <Link to="/">Back</Link>
-            <Link to="/nextPageHere">Next</Link> */}
+            {/* <Link to="/">Back</Link> */}
+            <Link to="/styles">Next</Link>
         </nav>
 
-        {/* <Route exact path="/" component={ mainPageComponent } />
-        <Route exact path="/nextPageHere" component={ nextPageComponent } /> */}
+        {/* <Route exact path="/" component={ mainPageComponent } /> */}
+        <Route exact path="/styles" component={ StyleOptions } />
 
         
       </div>
