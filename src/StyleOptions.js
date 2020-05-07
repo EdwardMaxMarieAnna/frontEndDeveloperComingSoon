@@ -26,9 +26,9 @@ export class StyleOptions extends Component {
     bringImages(query, page) {
         axios({
             method: 'GET',
-            url: `https://api.unsplash.com/search/photos`,
+            url: API_KEY,
             params: {
-                client_id: API_KEY,
+                client_id: "xKKGmMg-rkh2jY_YtDnKWrhn7OirQxRuhXHueyywbdw",
                 query: 'landing-page-background',
                 color: `${query}`
             }
@@ -56,7 +56,12 @@ export class StyleOptions extends Component {
 
         //passing color and page# to bringImages
         this.bringImages(usersColor);
-        
+
+        // using a timeout function to run function as it runs before the state is set causing issues passing props to Form.js
+        setTimeout(() => {
+            this.propPasser()
+        }, 250)
+
     }
 
     handleChangeFont = (event) => {
@@ -68,6 +73,11 @@ export class StyleOptions extends Component {
             backgroundSelected: this.state.backgroundSelected,
             font: event.target.value
         })
+
+        // using a timeout function to run function as it runs before the state is set causing issues passing props to Form.js
+        setTimeout(() => {
+            this.propPasser()            
+        }, 250)
     }
     
     handleImageClick = (event) => {
@@ -78,6 +88,11 @@ export class StyleOptions extends Component {
             backgroundSelected: event.target.src,
             font: this.state.backgroundSelected
         })
+
+        // using a timeout function to run function as it runs before the state is set causing issues passing props to Form.js
+        setTimeout(() => {
+            this.propPasser()
+        }, 250)
     }
 
     handleResetClick = (event) => {
@@ -92,6 +107,11 @@ export class StyleOptions extends Component {
             backgroundSelected: '',
             font: ''
         })
+    }
+
+    // put it into it's own function so I can delay it.
+    propPasser = () => {
+        this.props.styleInputs(this.state)
     }
 
 
