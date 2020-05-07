@@ -25,6 +25,7 @@ class Form extends Component {
       font: '',
       background: [],
       backgroundSelected: '',
+      // Param for checking page location for back and next links (still todo)
       step: 'about'
     }
   }
