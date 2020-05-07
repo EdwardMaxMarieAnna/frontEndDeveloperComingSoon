@@ -9,7 +9,9 @@ class Form extends Component {
 
   constructor() {
     super();
+    //create some state in Form.js for all form inputs so they can be used across forms
     this.state = {
+      //About params
       firstName: "",
       lastName: "",
       subtitle: "",
@@ -18,6 +20,11 @@ class Form extends Component {
       twitter: "",
       blog: "",
       other: "",
+      // StyleOptions params
+      color: '',
+      font: '',
+      background: [],
+      backgroundSelected: '',
       step: 'about'
     }
   }
@@ -42,19 +49,30 @@ class Form extends Component {
   // }
   
 
-  firstNameChange = (param) => {
+  
+  // create handler functions (handle on change) inside Form to update those pieces of state
+  // pass those functions as props to the class components
+  // inside class component, on input change, call those props
+  formParamInputs = (param) => {
     for (let [key, value] of Object.entries(param)) {
-      console.log(`${key}: ${value}`)
+      // console.log(`${key}: ${value}`)
       this.setState({
         [key]: value,
       })
     }
   }
 
-  //create some state in Form.js for all form inputs
-  // create handler functions (handle on change) inside Form to update those pieces of state
-  // pass those functions as props to the class components
-  // inside class component, on input change, call those props
+  styleParamInputs = (param) => {
+    console.log(param);
+    for (let [key, value] of Object.entries(param)) {
+      // console.log(`${key}: ${value}`)
+      this.setState({
+        [key]: value,
+      })
+    }
+  }
+
+
   render() {
     // console.log(this.props)
     return (
@@ -67,17 +85,17 @@ class Form extends Component {
             {/* Piece of state to  */}
             {/* create an array to store the steps and use said array plus the value in state to determine where we are in the flow. */}
             <Link to="/styles">Next</Link>
-            <Link to="/codeCopy">Next</Link>
+            {/* <Link to="/codeCopy">Next</Link> */}
         </nav>
 
-          <Route exact path="/about" render={(props) => <About formInputs={this.firstNameChange} {...props} />} />
+          <Route exact path="/about" render={(props) => <About formInputs={this.formParamInputs} {...props} />} />
         {/* <Route exact path="/styles" component={ StyleOptions } /> */}
 
-        {/* <Route exact path="/styles" render={(props) => <StyleOptions formInputs={this.state} {...props} />} />
+          <Route exact path="/styles" render={(props) => <StyleOptions styleInputs={this.styleParamInputs} {...props} />} />
 
-        <Route exact path="/demo" render={(props) => <StyleOptions formInputs={this.state} {...props} />} />
+        {/* <Route exact path="/demo" render={(props) => <StyleOptions formInputs={this.state} {...props} />} /> */}
         
-        <Route exact path="/codeCopy" render={(props) => <StyleOptions formInputs={this.state} {...props} />} /> */}
+        {/* <Route exact path="/codeCopy" render={(props) => <StyleOptions formInputs={this.state} {...props} />} /> */}
 
       </div>
 
