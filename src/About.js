@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Form from './components/form/Form';
 
 class About extends Component {
 
@@ -20,8 +21,8 @@ class About extends Component {
         //prevent default page refresh
         event.preventDefault();
         console.log("you submitted!")
-
-        //empting states after submission and other code is done using them (so it doesn't sit in form boxes)
+        
+        //emptying states after submission and other code is done using them (so it doesn't sit in form boxes)
         this.setState({
             firstName: "",
             lastName: "",
@@ -43,6 +44,7 @@ class About extends Component {
         this.setState({
             [inputName]: val
         })
+        this.props.formInputs(this.state)
     }
 
     render() {
