@@ -3,7 +3,6 @@ import About from "../../About";
 import StyleOptions from "../../StyleOptions.js"
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { render } from '@testing-library/react';
 
 class Form extends Component {
 
