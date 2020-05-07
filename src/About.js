@@ -49,7 +49,8 @@ class About extends Component {
 
     render() {
         return (
-            <div className="">
+            <div className="innerFormContainer formWrapper">
+                <h1>Hello! Please tell us a little about yourself.</h1>
                 <form action="" onSubmit={this.onSubmit}>
 
                     <fieldset className="firstLastName">

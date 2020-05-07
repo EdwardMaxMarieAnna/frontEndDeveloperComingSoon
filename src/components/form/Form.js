@@ -11,12 +11,10 @@ class Form extends Component {
   render() {
     return (
       <Router>
-        <div className="formContainer formWrapper">
+      <div className="formContainer">
         <About />
-        {/* <StyleOptions />
-        <Preview /> */}
-
-
+        {/* <StyleOptions /> */}
+        {/* <Preview /> */}
         <nav>
             {/* <Link to="/">Back</Link>
             <Link to="/nextPageHere">Next</Link> */}
@@ -27,7 +25,7 @@ class Form extends Component {
 
         
       </div>
-
+      
 
       </Router>
     )

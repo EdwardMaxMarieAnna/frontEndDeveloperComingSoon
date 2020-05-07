@@ -101,27 +101,58 @@ header {
     display: flex;
     justify-content: center;
     background-color:var(--background);
+    position: relative;
+}
+.innerFormContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 98%;
+    width: 98%;
+}
+
+
+.formContainer h1 {
+    font-size: 30px;
+    margin: 0 30px 35px;
+    text-align: center;
+}
+button {
+    border: 1px solid darkgray;
+    border-radius: 15px;
+    padding: 10px 30px;
+    box-shadow: 0 0 1px grey;
+    display: inline-block;
+}
+button:hover,
+button:focus {
+    
 }
 
 /* User input Area*/
-
 .formWrapper {
     max-width: 900px;
-    
+    width: 95%;
     margin: 0 auto;
 }
 
 .formContainer {
-    width: 95%;
     display: flex;
     flex-direction: column;
 }
 
+input {
+    height: 35px;
+    border-radius: 2px;
+    border: none;
+}
 
 .buttonDiv {
     display: flex;
     justify-content: center;
     margin-top: 50px;
+    position: absolute;
+    bottom: 0;
 }
 
 .back {
@@ -156,72 +187,4 @@ footer{
 }
 a:hover {
     color:var(--accentBlue);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* bottomNav */
-.bottomNav {
-    height:10%;
-    background-color:white;
-    border-top:2px solid grey;
-    display:flex;
-    align-items:center;
-    justify-content: space-around;
-}
-.bottomNav button {
-    padding:5px 20px;
-    border-radius:25px;
-    font-size:2.0rem;
-    background-color:white;
-}
-/* Copy Paste Section */
-.previewWrapper,
-.CopyPasteWrapper {
-    background-color:var(--background);
-    height:100vh;
-}
-.CopyPasteContainer,
-.previewContainer {
-    width:80%;
-    margin:0 auto;
-    height:90%;
-}
-.CopyPasteTitle{
-    text-align:center;
-    font-size:4.0rem;
-    padding:25px;
-}
-.CopyPasteType {
-    font-size:2.0rem;
-    background-color:var(--sideBackground);
-}
-.CopyPasteEach {
-    width:80%;
-    margin:0 auto;
-}
-textarea {
-    font-size:2.0rem;
-    width:100%;
-    background-color:rgb(11, 13, 44);
-    margin-bottom:50px;
-    color:white;
 }
