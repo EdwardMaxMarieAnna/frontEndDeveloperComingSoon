@@ -95,8 +95,9 @@ class About extends Component {
                     </fieldset>
                     {/* Previous needs to go back, need to figure out how to override form submit */}
                     <div className="buttonDiv">
-                    <button className="back">Back</button>
-                    <button className="next">Next</button>
+
+                    {/* <button className="next">Next</button> */}
+                    <input type="submit" hidden />
                     </div>
 
                 </form>

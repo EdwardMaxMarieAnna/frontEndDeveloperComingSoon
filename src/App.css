@@ -99,8 +99,17 @@ header {
 /* Main */
 .formContainer {
     display: flex;
+    flex-direction: column-reverse;
     justify-content: center;
     background-color:var(--background);
+}
+
+/* Nav Area*/
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
 }
 
 /* User input Area*/
@@ -109,11 +118,6 @@ header {
     max-width: 900px;
     width: 95%;
     margin: 0 auto;
-}
-
-.formContainer {
-    display: flex;
-    flex-direction: column;
 }
 
 .firstLastName {

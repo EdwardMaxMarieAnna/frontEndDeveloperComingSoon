@@ -11,13 +11,13 @@ class Form extends Component {
       <Router>
       <div className="formContainer">
         <h2>This is a Form</h2>
-        <About />
+        {/* <About /> */}
         <nav>
-            {/* <Link to="/">Back</Link> */}
+            <Link to="/about">Back</Link>
             <Link to="/styles">Next</Link>
         </nav>
 
-        {/* <Route exact path="/" component={ mainPageComponent } /> */}
+        <Route exact path="/about" component={ About } />
         <Route exact path="/styles" component={ StyleOptions } />
 
         

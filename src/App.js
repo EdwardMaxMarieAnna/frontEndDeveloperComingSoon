@@ -24,7 +24,7 @@ class App extends Component {
         <Form />
         </div>
         <Footer />
-        <StyleOptions />
+        {/* <StyleOptions /> */}
       </div>
     )
   }
