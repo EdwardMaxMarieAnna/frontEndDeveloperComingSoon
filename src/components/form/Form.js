@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Preview from './Preview.js'
+
 import About from "../../About";
 import StyleOptions from "../../StyleOptions.js"
 
@@ -114,6 +116,7 @@ class Form extends Component {
           <Route exact path="/codeCopy" render={(props) => <PasteCode formInputs={this.state} {...props} />} /> */}
 
       </div>
+      
 
       </Router>
     )
