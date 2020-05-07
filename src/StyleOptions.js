@@ -10,6 +10,7 @@ export class StyleOptions extends Component {
         this.state = {
             // this is our user's color selection
             color: '',
+            //don't pass this prop, just to store options for user to pick from
             background: [],
             // id of selected background goes here
             backgroundSelected: '',
@@ -65,9 +66,8 @@ export class StyleOptions extends Component {
     
     handleImageClick = (event) => {
         event.preventDefault();
-        
         this.setState({
-            backgroundSelected: event.target.id
+            backgroundSelected: event.target.src
         })
     }
 
@@ -148,8 +148,8 @@ export class StyleOptions extends Component {
                                 onClick={this.handleImageClick} 
                                 key={`${image.id}`} 
                                 id={`${image.id}`}
-                                // instead of small can also use full, raw, regular, thumb
-                                src = {`${image.urls.small}`} 
+                                // instead of small can also use small, raw, regular, thumb
+                                src = {`${image.urls.full}`} 
                                 alt={`${image.alt_description}`}
                             />
                         )
