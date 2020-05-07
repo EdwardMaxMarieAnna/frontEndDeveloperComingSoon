@@ -25,7 +25,7 @@ export class StyleOptions extends Component {
     bringImages(query, page) {
         axios({
             method: 'GET',
-            url: `https://api.unsplash.com/search/photos`,
+            url: API_KEY,
             params: {
                 client_id: "xKKGmMg-rkh2jY_YtDnKWrhn7OirQxRuhXHueyywbdw",
                 query: 'landing-page-background',
