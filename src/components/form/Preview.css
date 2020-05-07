@@ -17,6 +17,7 @@
 
 .previewViewPort {
     padding: 30px;
+    background-color: plum;
 }
 
 .decorativeBackSplash{
@@ -26,13 +27,14 @@
 }
 .previewViewPort ul {
     display: flex;
-    /* margin: 30px; */
+    font-size: 19px;
 }
 .previewViewPort li,
 .previewViewPort h2,
 .previewViewPort h3,
 .previewViewPort h4 {
     margin: 10px;
+    text-shadow: 1px 1px 0px rgba(173, 173, 173, 0.13);
 }
 
 .previewViewPort h2 {
@@ -47,19 +49,23 @@
     font-size: calc(15px + .2vw )
 }
 
-/* .black_and_white{
+.black_and_white{
+
 
 }
 .black{
+    background-color: black;
+    color: white;
 
 }
 .white{
-
+    background-color: #fff;
+    text-shadow: 1px 1px 0px rgb(255, 255, 255);
+} 
+.yellow {
+background-color: gold;
 }
-.yellow{
-text-shadow: 2px 2px 8px #FFF007;
-}
-.orange{
+ /* .orange{
 
 }
 .red{
@@ -79,9 +85,9 @@ text-shadow: 2px 2px 8px #FF0000;
 }
 .blue{
 
-} */
+} 
 
-    /* //create css styles for each style you want
+    //create css styles for each style you want
     // like if user picks black color this will happen
     let blackStyle = 'black';
     let yellowStyle = 'yellow'

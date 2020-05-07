@@ -7,7 +7,7 @@ class Form extends Component {
     return (
       <div className="formContainer">
         <h2>This is a Form</h2>
-       <Preview />
+       {/* <Preview /> */}
       </div>
     )
   }

@@ -15,9 +15,9 @@ class Preview extends Component {
             instagram: "marieerincodes",
             blog: "",
             other: "",
-            color: "",
+            color: "yellow",
             background: "",
-            backgroundImage: "http://placegoat.com/200/200",
+            backgroundImage: "",
             font: ""
         }
     }
@@ -26,10 +26,14 @@ class Preview extends Component {
             width: "90%",
             height: "60%",
             backgroundImage: `url(${this.state.backgroundImage})`, 
-            background: "pink",
+            background: `${this.state.background}`,
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
+            font: ""
         }
+        // if email, linkedin, twitter, instagram, blog or other are empty 
+        // dont show icon
+
         
         return(
             
