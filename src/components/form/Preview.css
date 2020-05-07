@@ -1,0 +1,95 @@
+.previewSitePage,
+.previewViewPort,
+.decorativeBackSplash {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.previewSitePage{
+    height: 100%;
+}
+.previewSitePage h1{
+    font-size: 30px;
+    margin: 0 30px 35px;
+}
+
+.previewViewPort {
+    padding: 30px;
+}
+
+.decorativeBackSplash{
+    background-color:rgba(255, 255, 255, 0.2);
+    border: 5px double rgba(255, 255, 255, 0.2);
+    padding: 50px;
+}
+.previewViewPort ul {
+    display: flex;
+    /* margin: 30px; */
+}
+.previewViewPort li,
+.previewViewPort h2,
+.previewViewPort h3,
+.previewViewPort h4 {
+    margin: 10px;
+}
+
+.previewViewPort h2 {
+    font-size: calc(20px + .2vw);
+}
+
+.previewViewPort h3 {
+    font-size: calc(16.5px + .2vw );
+}
+
+.previewViewPort h4 {
+    font-size: calc(15px + .2vw )
+}
+
+/* .black_and_white{
+
+}
+.black{
+
+}
+.white{
+
+}
+.yellow{
+text-shadow: 2px 2px 8px #FFF007;
+}
+.orange{
+
+}
+.red{
+text-shadow: 2px 2px 8px #FF0000;
+}
+.purple{
+
+}
+.magenta{
+
+}
+.green{
+
+}
+.teal{
+
+}
+.blue{
+
+} */
+
+    /* //create css styles for each style you want
+    // like if user picks black color this will happen
+    let blackStyle = 'black';
+    let yellowStyle = 'yellow'
+    // and etc for every style you want to create
+    // than put it into long ass if function
+    if (this.props.color === 'black') {
+       //and you adding class 'black' to your preview page
+    }
+    if(this.props.color === 'yellow')
+    //here yellow class 'yellow'
+    } */
