@@ -107,54 +107,16 @@ header {
 
 .formWrapper {
     max-width: 900px;
-    width: 95%;
+    
     margin: 0 auto;
 }
 
 .formContainer {
+    width: 95%;
     display: flex;
     flex-direction: column;
 }
 
-.firstLastName {
-    display: flex;
-    margin-bottom: 10px;
-}
-
-.firstLastName .firstNameDiv,
-.firstLastName .lastNameDiv {
-    display: flex;
-    flex-direction: column;
-    width: 49%;
-}
-
-.firstLastName .firstNameDiv {
-    /* margin-left: 2%; */
-}
-
-.firstLastName .lastNameDiv {
-    margin-left: 2%;
-}
-
-.subtitle,
-.email {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-}
-
-
-.socialMedia {
-    margin-bottom: 10px;
-}
-
-
-.socialMedia div {
-    display: inline-flex;
-    flex-direction: column;
-    width: 24%;
-    margin-left: 1%;
-}
 
 .buttonDiv {
     display: flex;

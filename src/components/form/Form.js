@@ -4,15 +4,19 @@ import Preview from './Preview.js'
 import About from "../../About";
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import StyleOptions from '../../StyleOptions.js';
 
 class Form extends Component {
 
   render() {
     return (
       <Router>
-      <div className="formContainer">
-        <h2>This is a Form</h2>
+        <div className="formContainer formWrapper">
         <About />
+        {/* <StyleOptions />
+        <Preview /> */}
+
+
         <nav>
             {/* <Link to="/">Back</Link>
             <Link to="/nextPageHere">Next</Link> */}
@@ -23,7 +27,7 @@ class Form extends Component {
 
         
       </div>
-      
+
 
       </Router>
     )

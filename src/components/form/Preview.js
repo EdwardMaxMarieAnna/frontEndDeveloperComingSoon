@@ -23,13 +23,9 @@ class Preview extends Component {
     }
     render() {
         const previewStyle = {
-            width: "90%",
-            height: "60%",
             backgroundImage: `url(${this.state.backgroundImage})`, 
             background: `${this.state.background}`,
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-            font: ""
+            font: `${this.state.font}`
         }
         // if email, linkedin, twitter, instagram, blog or other are empty 
         // dont show icon

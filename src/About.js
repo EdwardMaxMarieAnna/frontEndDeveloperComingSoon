@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './About.css'
 
 class About extends Component {
 
@@ -48,7 +49,7 @@ class About extends Component {
 
     render() {
         return (
-            <div className="formContainer formWrapper">
+            <div className="">
                 <form action="" onSubmit={this.onSubmit}>
 
                     <fieldset className="firstLastName">
