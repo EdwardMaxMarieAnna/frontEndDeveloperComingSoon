@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Header from './components/header/Header.js'
 import Footer from './components/footer/Footer.js'
 import Form from './components/form/Form.js'
-import StyleOptions from './StyleOptions.js';
 import './App.css';
 
 

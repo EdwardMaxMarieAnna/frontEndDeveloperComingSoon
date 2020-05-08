@@ -21,9 +21,8 @@ class About extends Component {
         //prevent default page refresh
         event.preventDefault();
         console.log("you submitted!")
-        console.log(this.state.firstName, this.state.lastName, this.state.subtitle)
-
-        //empting states after submission and other code is done using them (so it doesn't sit in form boxes)
+        
+        //emptying states after submission and other code is done using them (so it doesn't sit in form boxes)
         this.setState({
             firstName: "",
             lastName: "",
@@ -36,6 +35,7 @@ class About extends Component {
         })
     }
 
+
     //below is to test simplified data collection. By setting nam in an array we can take the val of any input. Saving that to a unique state is the part I so far can't figure out.
     handleOnChange = (event) => {
         // console.log(event.target.value);
@@ -45,6 +45,7 @@ class About extends Component {
         this.setState({
             [inputName]: val
         })
+        this.props.formInputs(this.state)
     }
 
     render() {
@@ -98,8 +99,9 @@ class About extends Component {
                     </fieldset>
                     {/* Previous needs to go back, need to figure out how to override form submit */}
                     <div className="buttonDiv">
-                    <button className="back">Back</button>
-                    <button className="next">Next</button>
+
+                    {/* <button className="next">Next</button> */}
+                    <input type="submit" hidden />
                     </div>
 
                 </form>

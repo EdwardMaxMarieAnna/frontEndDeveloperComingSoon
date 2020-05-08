@@ -99,6 +99,7 @@ header {
 /* Main */
 .formContainer {
     display: flex;
+    flex-direction: column-reverse;
     justify-content: center;
     background-color:var(--background);
     position: relative;
@@ -116,6 +117,26 @@ header {
     font-size: 30px;
     margin: 0 30px 35px;
     text-align: center;
+}
+/* Nav Area*/
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+
+/* User input Area*/
+
+.formWrapper {
+    max-width: 900px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.firstLastName {
+    display: flex;
+    margin-bottom: 10px;
 }
 button {
     margin: 25px 30px;
@@ -135,6 +156,7 @@ button:focus {
     background-color: var(--accentBlue);
     color: white;
 
+<<<<<<< HEAD
 }
 button.back:hover,
 button.back:focus {
@@ -142,6 +164,8 @@ button.back:focus {
     box-shadow:.5px .5px 5px var(--accentBlue);
       
 }
+=======
+>>>>>>> master
 
 label {
     margin: 10px 10px 10px 0;
