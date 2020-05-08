@@ -99,7 +99,7 @@ export class StyleOptions extends Component {
 
     render() {
         return (
-            <div style={style} className="innerFormContainer ">
+            <div style={style} className="innerFormContainer">
                 <h1>STYLE OPTIONS</h1>
 
                 {/* this is option for for our font selection */}

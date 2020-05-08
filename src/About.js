@@ -86,7 +86,7 @@ class About extends Component {
                         </div>
 
                         <div>
-                        <label htmlFor="blog">Blog:</label>
+                        <label htmlFor="blog">GitHub:</label>
                         <input type="text" value={this.state.blog} onChange={this.handleOnChange} name="blog" />
                         </div>
 

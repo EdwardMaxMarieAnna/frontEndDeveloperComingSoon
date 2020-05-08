@@ -13,8 +13,8 @@ class Form extends Component {
       <Router>
       <div className="formContainer">
         {/* <About /> */}
-        <StyleOptions />
-        {/* <Preview /> */}
+        {/* <StyleOptions /> */}
+        <Preview />
         <nav>
             {/* <Link to="/">Back</Link>
             <Link to="/nextPageHere">Next</Link> */}
