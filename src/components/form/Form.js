@@ -12,8 +12,8 @@ class Form extends Component {
     return (
       <Router>
       <div className="formContainer">
-        <About />
-        {/* <StyleOptions /> */}
+        {/* <About /> */}
+        <StyleOptions />
         {/* <Preview /> */}
         <nav>
             {/* <Link to="/">Back</Link>

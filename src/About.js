@@ -49,7 +49,7 @@ class About extends Component {
 
     render() {
         return (
-            <div className="innerFormContainer formWrapper">
+            <div className="innerFormContainer formWrapper about">
                 <h1>Hello! Please tell us a little about yourself.</h1>
                 <form action="" onSubmit={this.onSubmit}>
 
