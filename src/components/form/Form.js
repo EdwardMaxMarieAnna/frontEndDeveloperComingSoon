@@ -49,6 +49,8 @@ class Form extends Component {
       return backTo = '/styles'
     } else if (page === '/codeCopy') {
       return backTo = '/preview'
+    } else if (page === 'login') {
+      return backTo = 'codeCopy'
     } else {
       return backTo = '/codeCopy'
       // on load opens 'home page', so at least we can move back to last page

@@ -1,10 +1,10 @@
 import firebase from firebase;
 // import firebase from "firebase/app";
 // import "firebase/database";
-
+const API_KEY = process.env.REACT_APP_FIREBASE_API_KEY;
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyAv0b9u3Bbw38wXpfF3r86qneCcNo9BasE",
+    apiKey: API_KEY,
     authDomain: "project6-f3485.firebaseapp.com",
     databaseURL: "https://project6-f3485.firebaseio.com",
     projectId: "project6-f3485",
