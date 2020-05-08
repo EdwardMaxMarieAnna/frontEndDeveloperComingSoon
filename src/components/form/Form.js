@@ -3,6 +3,7 @@ import Preview from './Preview.js'
 import PasteCode from '../PasteCode'
 import About from "../../About";
 import StyleOptions from "../../StyleOptions.js"
+import Login from "../../Login.js"
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class Form extends Component {
@@ -71,6 +72,8 @@ class Form extends Component {
     } else if (page === '/preview') {
       return nextTo = '/codeCopy'
     } else if (page === '/codeCopy') {
+      return nextTo = '/login'
+    } else if (page === '/login') {
       return nextTo = '/about'
     } else {
       return nextTo = '/about'
