@@ -97,24 +97,30 @@ class Form extends Component {
     return (
       <Router>
       <div className="formContainer">
-        <h2>This is a Form</h2>
         {/* <About /> */}
         <nav>
             <Link to={"/about"}>Back</Link>
             {/* Piece of state to  */}
             {/* create an array to store the steps and use said array plus the value in state to determine where we are in the flow. */}
             <Link to="/styles">Next</Link>
+
+            <Link to="/preview">NNNNext</Link>
             {/* <Link to="/codeCopy">Next</Link> */}
         </nav>
+          <Route exact path="/about" 
+            render={(props) =>
+                <About formInputs={this.formParamInputs} {...props}/>}/>
 
-          <Route exact path="/about" render={(props) => <About formInputs={this.formParamInputs} {...props} />} />
+          <Route exact path="/styles" 
+            render={(props) => 
+              <StyleOptions styleInputs={this.styleParamInputs} {...props} />} />
 
-          <Route exact path="/styles" render={(props) => <StyleOptions styleInputs={this.styleParamInputs} {...props} />} />
-
-          {/* <Route exact path="/preview" render={(props) => <Preview previewInputs={this.stateSomeFunction} {...props} />} />
+          <Route exact path="/preview" 
+            render={(props) => 
+              <Preview previewInputs={this.state} {...props} />} 
+          />
         
-          <Route exact path="/codeCopy" render={(props) => <PasteCode formInputs={this.state} {...props} />} /> */}
-
+          {/* <Route exact path="/codeCopy" render={(props) => <PasteCode formInputs={this.state} {...props} />} /> */}
       </div>
       
 

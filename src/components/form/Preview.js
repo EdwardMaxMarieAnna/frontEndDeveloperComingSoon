@@ -6,33 +6,39 @@ class Preview extends Component {
     constructor() {
         super();
         this.state = {
-            firstName: "Marie",
-            lastName: "oshaughnessy",
-            subtitle: "get in touch",
-            email: "bob@bob.com",
-            linkedIn: "marieerin",
-            twitter: "marieerincodes",
-            instagram: "marieerincodes",
-            blog: "",
-            other: "",
-            color: "yellow",
-            background: "",
-            backgroundImage: "",
-            font: ""
         }
     }
+
+
+
+    
     render() {
+
+        // if email, linkedin, twitter, instagram, blog or other are empty 
+        // dont show icon
+        const firstName = this.props.previewInputs.firstName
+        const lastName = this.props.previewInputs.lastName
+        const subtitle = this.props.previewInputs.subtitle
+        const email = this.props.previewInputs.email
+        const linkedIn = this.props.previewInputs.linkedIn
+        const twitter = this.props.previewInputs.twitter
+        const instagram = this.props.previewInputs.instagram
+        const blog = this.props.previewInputs.blog
+        const other = this.props.previewInputs.other
+        const color = this.props.previewInputs.color
+        const background = this.props.previewInputs.background
+        const backgroundImage = this.props.previewInputs.backgroundImage
+        const font = this.props.previewInputs.font
+        
         const previewStyle = {
             width: "90%",
             height: "60%",
-            backgroundImage: `url(${this.state.backgroundImage})`, 
-            background: `${this.state.background}`,
+            backgroundImage: `url(${backgroundImage})`,
+            background: `${background}`,
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
-            font: ""
+            font: `${font}`
         }
-        // if email, linkedin, twitter, instagram, blog or other are empty 
-        // dont show icon
 
         
         return(
@@ -41,18 +47,18 @@ class Preview extends Component {
                 <h1>What do you think?</h1>
                 <div className="wrapper previewViewPort" style={previewStyle}>
                     <div className="decorativeBackSplash">
-                        <h2>Hello I'm {this.state.firstName} {this.state.lastName}!</h2>
+                        <h2>Hello I'm {firstName} {lastName}!</h2>
                         <h3>My website is comming soon!</h3>
                         <h4>{this.state.subtitle}</h4>
                         <ul>
                             <li>
-                                <a href={`https://twitter.com/${this.state.twitter}`}><i className="fab fa-twitter"></i></a>
+                                <a href={`https://twitter.com/${twitter}`}><i className="fab fa-twitter"></i></a>
                             </li>
                             <li>
-                                <a href={`https://www.linkedin.com/in/${this.state.linkedIn}`}><i className="fab fa-linkedin-in"></i></a>
+                                <a href={`https://www.linkedin.com/in/${linkedIn}`}><i className="fab fa-linkedin-in"></i></a>
                             </li>
                             <li>
-                                <a href={`https://www.instagram.com/${this.state.instagram}`}><i className="fab fa-instagram"></i></a>
+                                <a href={`https://www.instagram.com/${instagram}`}><i className="fab fa-instagram"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -62,4 +68,5 @@ class Preview extends Component {
     }
 }
 
-export default Preview;
+
+export default Preview
