@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/EdwardMaxMarieAnna.github.io/frontEndDeveloperComingSoon/static/css/main.58d63402.chunk.css",
-    "main.js": "/EdwardMaxMarieAnna.github.io/frontEndDeveloperComingSoon/static/js/main.4d91b7d9.chunk.js",
-    "main.js.map": "/EdwardMaxMarieAnna.github.io/frontEndDeveloperComingSoon/static/js/main.4d91b7d9.chunk.js.map",
-    "runtime-main.js": "/EdwardMaxMarieAnna.github.io/frontEndDeveloperComingSoon/static/js/runtime-main.67dac35e.js",
-    "runtime-main.js.map": "/EdwardMaxMarieAnna.github.io/frontEndDeveloperComingSoon/static/js/runtime-main.67dac35e.js.map",
-    "static/js/2.c9321dd3.chunk.js": "/EdwardMaxMarieAnna.github.io/frontEndDeveloperComingSoon/static/js/2.c9321dd3.chunk.js",
-    "static/js/2.c9321dd3.chunk.js.map": "/EdwardMaxMarieAnna.github.io/frontEndDeveloperComingSoon/static/js/2.c9321dd3.chunk.js.map",
-    "index.html": "/EdwardMaxMarieAnna.github.io/frontEndDeveloperComingSoon/index.html",
-    "precache-manifest.25aa8679861d6ee80e3396aff6364dd2.js": "/EdwardMaxMarieAnna.github.io/frontEndDeveloperComingSoon/precache-manifest.25aa8679861d6ee80e3396aff6364dd2.js",
-    "service-worker.js": "/EdwardMaxMarieAnna.github.io/frontEndDeveloperComingSoon/service-worker.js",
-    "static/css/main.58d63402.chunk.css.map": "/EdwardMaxMarieAnna.github.io/frontEndDeveloperComingSoon/static/css/main.58d63402.chunk.css.map",
-    "static/js/2.c9321dd3.chunk.js.LICENSE.txt": "/EdwardMaxMarieAnna.github.io/frontEndDeveloperComingSoon/static/js/2.c9321dd3.chunk.js.LICENSE.txt",
-    "static/media/logo.png": "/EdwardMaxMarieAnna.github.io/frontEndDeveloperComingSoon/static/media/logo.ad25eba7.png"
+    "main.css": "/edwardMaxMarieAnna.github.io/frontEndDeveloperComingSoon/static/css/main.58d63402.chunk.css",
+    "main.js": "/edwardMaxMarieAnna.github.io/frontEndDeveloperComingSoon/static/js/main.476f9aba.chunk.js",
+    "main.js.map": "/edwardMaxMarieAnna.github.io/frontEndDeveloperComingSoon/static/js/main.476f9aba.chunk.js.map",
+    "runtime-main.js": "/edwardMaxMarieAnna.github.io/frontEndDeveloperComingSoon/static/js/runtime-main.99a640c0.js",
+    "runtime-main.js.map": "/edwardMaxMarieAnna.github.io/frontEndDeveloperComingSoon/static/js/runtime-main.99a640c0.js.map",
+    "static/js/2.c9321dd3.chunk.js": "/edwardMaxMarieAnna.github.io/frontEndDeveloperComingSoon/static/js/2.c9321dd3.chunk.js",
+    "static/js/2.c9321dd3.chunk.js.map": "/edwardMaxMarieAnna.github.io/frontEndDeveloperComingSoon/static/js/2.c9321dd3.chunk.js.map",
+    "index.html": "/edwardMaxMarieAnna.github.io/frontEndDeveloperComingSoon/index.html",
+    "precache-manifest.d16750425389bc53182657c2b157d262.js": "/edwardMaxMarieAnna.github.io/frontEndDeveloperComingSoon/precache-manifest.d16750425389bc53182657c2b157d262.js",
+    "service-worker.js": "/edwardMaxMarieAnna.github.io/frontEndDeveloperComingSoon/service-worker.js",
+    "static/css/main.58d63402.chunk.css.map": "/edwardMaxMarieAnna.github.io/frontEndDeveloperComingSoon/static/css/main.58d63402.chunk.css.map",
+    "static/js/2.c9321dd3.chunk.js.LICENSE.txt": "/edwardMaxMarieAnna.github.io/frontEndDeveloperComingSoon/static/js/2.c9321dd3.chunk.js.LICENSE.txt",
+    "static/media/logo.png": "/edwardMaxMarieAnna.github.io/frontEndDeveloperComingSoon/static/media/logo.ad25eba7.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.67dac35e.js",
+    "static/js/runtime-main.99a640c0.js",
     "static/js/2.c9321dd3.chunk.js",
     "static/css/main.58d63402.chunk.css",
-    "static/js/main.4d91b7d9.chunk.js"
+    "static/js/main.476f9aba.chunk.js"
   ]
 }
