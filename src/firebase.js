@@ -3,7 +3,7 @@ import "firebase/auth";
 import "firebase/firestore";
 
 const API_KEY = process.env.REACT_APP_FIREBASE_API_KEY;
-const API_KEY_TWO = process.env.REACT_APP_FIREBASE_API_KEY_TWO;
+
 
 // Firebase Auth provides different methods of signing in, such as signInWithRedirect, which redirects the user to a new page, and signInWithPopup, which makes use of a pop-up.
 const provider = new firebase.auth.GoogleAuthProvider();

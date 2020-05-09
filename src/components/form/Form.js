@@ -3,8 +3,8 @@ import Preview from './Preview.js';
 import PasteCode from '../PasteCode';
 import About from "../../About";
 import StyleOptions from "../../StyleOptions.js";
-import Application from "../../Application.js";
-import UserProvider from "../../UserProvider";
+// import Application from "../../Application.js";
+// import UserProvider from "../../UserProvider";
 import Login from "../../Login.js";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 

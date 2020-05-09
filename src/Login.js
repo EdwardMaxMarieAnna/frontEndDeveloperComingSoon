@@ -42,6 +42,20 @@ class Login extends Component {
             });
     }
     
+    anon = () => {
+        firebase.auth().signInAnonymously()
+            .then(function () {
+                console.log('Logged in as Anonymous!')
+
+            }).catch(function (error) {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                console.log(errorCode);
+                console.log(errorMessage);
+            });
+            // ...
+
+    }
 
     render() {
         return (
@@ -50,6 +64,7 @@ class Login extends Component {
                 <header>
                     <h1>Authy App</h1>
                     {this.state.user ? <button onClick={this.logout}>Log Out</button> : <button onClick={this.login}>Log In</button>}
+                    <button onClick={this.anon}>Log In Anon</button>
                 </header>
             </div>
         )
