@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './StyleOptions.css'
 
 //hiding api hehehehe
 const API_KEY = process.env.REACT_APP_UNSPLASH_API_KEY;
@@ -118,7 +119,7 @@ export class StyleOptions extends Component {
 
     render() {
         return (
-            <div style={style}>
+            <div style={style} className="innerFormContainer">
                 <h1>STYLE OPTIONS</h1>
 
                 {/* this is option for for our font selection */}
@@ -165,7 +166,7 @@ export class StyleOptions extends Component {
                     
 
                     {/* reset button */}
-                    <button onClick={this.handleResetClick} type="reset">RESET</button>
+                    <button className="reset" onClick={this.handleResetClick} type="reset">RESET</button>
                     {/* <input onClick={this.handleResetClick} type="reset" value="Reset"/> */}
                 </form>
 
@@ -183,6 +184,10 @@ export class StyleOptions extends Component {
                             />
                         )
                     })}
+                </div>
+                <div className="buttonDiv">
+                    <button className="back">Back</button>
+                    <button className="next">Next</button>
                 </div>
 
             </div>

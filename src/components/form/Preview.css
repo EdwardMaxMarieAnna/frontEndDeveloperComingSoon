@@ -1,3 +1,7 @@
+.hidden{
+    display: none;
+}
+
 .previewSitePage,
 .previewViewPort,
 .decorativeBackSplash {
@@ -16,7 +20,11 @@
 }
 
 .previewViewPort {
+    width: 90%;
+    height: 60%;
     padding: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: plum;
 }
 

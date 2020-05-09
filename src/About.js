@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
+import './About.css'
 
 class About extends Component {
 
     constructor() {
         super();
         this.state = {
-            firstName: "",
-            lastName: "",
-            subtitle: "",
-            email: "",
-            linkedIn: "",
-            twitter: "",
-            blog: "",
-            other: "",
+                firstName: "",
+                lastName: "",
+                subtitle: "",
+                email: "",
+                linkedIn: "",
+                twitter: "",
+                blog: "",
+                other: "",
         }
     }
 
@@ -49,7 +50,8 @@ class About extends Component {
 
     render() {
         return (
-            <div className="formContainer formWrapper">
+            <div className="innerFormContainer formWrapper about">
+                <h1>Hello! Please tell us a little about yourself.</h1>
                 <form action="" onSubmit={this.onSubmit}>
 
                     <fieldset className="firstLastName">
@@ -85,13 +87,20 @@ class About extends Component {
                         </div>
 
                         <div>
-                        <label htmlFor="blog">Blog:</label>
+                        <label htmlFor="blog">GitHub:</label>
                         <input type="text" value={this.state.blog} onChange={this.handleOnChange} name="blog" />
                         </div>
 
+                    </fieldset>
+                    <fieldset className="socialMediaTwo">
                         <div>
-                        <label htmlFor="other">Other:</label>
-                        <input type="text" value={this.state.other} onChange={this.handleOnChange} name="other" />
+                            <label htmlFor="other">Blog (full link):</label>
+                            <input type="text" value={this.state.other} onChange={this.handleOnChange} name="other" />
+                        </div>
+
+                        <div>
+                            <label htmlFor="other">Other (full link):</label>
+                            <input type="text" value={this.state.other} onChange={this.handleOnChange} name="other" />
                         </div>
 
                     </fieldset>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import Preview from './Preview.js'
 import PasteCode from '../PasteCode'
 import About from "../../About";
@@ -18,6 +19,7 @@ class Form extends Component {
       email: "",
       linkedIn: "",
       twitter: "",
+      github: "",
       blog: "",
       other: "",
       // StyleOptions params
