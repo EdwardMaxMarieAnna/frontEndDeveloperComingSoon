@@ -19,14 +19,15 @@ class Form extends Component {
       email: "",
       linkedIn: "",
       twitter: "",
+      instagram: "",
       github: "",
       blog: "",
       other: "",
       // StyleOptions params
       color: '',
-      font: '',
       background: [],
-      backgroundSelected: ''
+      backgroundSelected: '',
+      font: '',
     }
   }
 
@@ -121,7 +122,7 @@ class Form extends Component {
 
           <Route path="/styles" render={(props) => <StyleOptions styleInputs={this.styleParamInputs} {...props} />} />
 
-          <Route path="/preview" render={(props) => <Preview previewInputs={this.stateSomeFunction} {...props} />} />
+          <Route path="/preview" render={(props) => <Preview previewInputs={this.state} {...props} />} />
 
           <Route path="/codeCopy" render={(props) => <PasteCode formInputs={this.state} {...props} />} />
         </div>

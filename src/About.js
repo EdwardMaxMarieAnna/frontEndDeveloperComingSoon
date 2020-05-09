@@ -12,6 +12,7 @@ class About extends Component {
                 email: "",
                 linkedIn: "",
                 twitter: "",
+                instagram: "",
                 blog: "",
                 other: "",
         }
@@ -30,6 +31,7 @@ class About extends Component {
             email: "",
             linkedIn: "",
             twitter: "",
+            instagram: "",
             blog: "",
             other: "",
         })
@@ -56,11 +58,11 @@ class About extends Component {
 
                     <fieldset className="firstLastName">
                         <div className="firstNameDiv">
-                        <label htmlFor="firstName:">First name:</label>
+                        <label htmlFor="firstName:">First name*:</label>
                         <input type="text" value={this.state.firstName} onChange={this.handleOnChange} name="firstName" />
                         </div>
                         <div className="lastNameDiv">
-                        <label htmlFor="lastName:">Last name:</label>
+                        <label htmlFor="lastName:">Last name*:</label>
                         <input type="text" value={this.state.lastName} onChange={this.handleOnChange} name="lastName" />
                         </div>
                     </fieldset>
@@ -71,39 +73,41 @@ class About extends Component {
                     </fieldset>
 
                     <fieldset className="email">
-                        <label htmlFor="email">Email:</label>
+                        <label htmlFor="email">Email*:</label>
                         <input type="email" value={this.state.email} onChange={this.handleOnChange} name="email" />
                     </fieldset>
 
                     <fieldset className="socialMedia">
                         <div>
                         <label htmlFor="linkedIn">LinkedIn</label>
-                        <input type="text" value={this.state.linkedIn} onChange={this.handleOnChange} name="linkedIn" />
+                            <input type="text" value={this.state.linkedIn} onChange={this.handleOnChange} name="linkedIn" placeholder="@userName"/>
                         </div>
 
                         <div>
                         <label htmlFor="twitter">Twitter:</label>
-                        <input type="text" value={this.state.twitter} onChange={this.handleOnChange} name="twitter" />
+                            <input type="text" value={this.state.twitter} onChange={this.handleOnChange} name="twitter" placeholder="@userName"/>
                         </div>
 
                         <div>
                         <label htmlFor="blog">GitHub:</label>
-                        <input type="text" value={this.state.blog} onChange={this.handleOnChange} name="blog" />
+                            <input type="text" value={this.state.blog} onChange={this.handleOnChange} name="blog" placeholder="@userName"/>
                         </div>
 
                     </fieldset>
                     <fieldset className="socialMediaTwo">
                         <div>
-                            <label htmlFor="other">Blog (full link):</label>
-                            <input type="text" value={this.state.other} onChange={this.handleOnChange} name="other" />
+                            <label htmlFor="blog">Blog:</label>
+                            <input type="text" value={this.state.other} onChange={this.handleOnChange} name="blog"  placeholder="https://fullwebsiteurl.com"/>
                         </div>
 
                         <div>
-                            <label htmlFor="other">Other (full link):</label>
-                            <input type="text" value={this.state.other} onChange={this.handleOnChange} name="other" />
+                            <label htmlFor="other">Other:</label>
+                            <input type="text" value={this.state.other} onChange={this.handleOnChange} name="other" placeholder="https://fullwebsiteurl.com"/>
                         </div>
 
                     </fieldset>
+                    <span>*Required Fields</span>
+
                     {/* Previous needs to go back, need to figure out how to override form submit */}
                     <div className="buttonDiv">
 

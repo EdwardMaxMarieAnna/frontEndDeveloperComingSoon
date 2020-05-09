@@ -10,7 +10,8 @@ class Preview extends Component {
             twitterHidden: "",
         }
     }
-    
+    // look at props
+    //if twitter, linked in, instagram, blog, github
 
 
 
@@ -27,8 +28,9 @@ class Preview extends Component {
         const linkedIn = this.props.previewInputs.linkedIn
         const twitter = this.props.previewInputs.twitter
         const instagram = this.props.previewInputs.instagram
-        const blog = this.props.previewInputs.blog
         const github = this.props.previewInputs.github
+        const blog = this.props.previewInputs.blog
+        const other = this.props.previewInputs.other
         const color = this.props.previewInputs.color
         const background = this.props.previewInputs.background
         const backgroundImage = this.props.previewInputs.backgroundImage
@@ -78,12 +80,11 @@ class Preview extends Component {
                             </li>
                             <li >
                                 <a href={`${blog}`}>
-                                    <i className="fab fa-blogger-b"></i>
-                                </a>
+                                    <i class="fas fa-blog"></i>                                </a>
                             </li>
                             <li>
                                 <a href={`${email}`}>
-                                    <i className="fab fa-envelope"></i>
+                                    <i class="far fa-envelope"></i>
                                 </a>
                             </li>
 
