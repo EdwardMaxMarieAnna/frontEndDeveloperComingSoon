@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import Preview from './Preview.js'
-import PasteCode from '../PasteCode'
+import Preview from './Preview.js';
+import PasteCode from '../PasteCode';
 import About from "../../About";
-import StyleOptions from "../../StyleOptions.js"
+import StyleOptions from "../../StyleOptions.js";
+import Application from "../../Application.js";
+import UserProvider from "../../UserProvider";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class Form extends Component {
@@ -110,8 +112,10 @@ class Form extends Component {
     return (
       <Router>
         <div className="formContainer">
-          <h2>This is a Form</h2>
-          {/* <About /> */}
+          <UserProvider>
+            <Application />
+          </UserProvider>
+          {/* <Application /> */}
           <nav>
             <Link to={this.handleBackButton}>Back</Link>
             {/* Piece of state to  */}
@@ -119,6 +123,8 @@ class Form extends Component {
             <Link to={this.handleNextButton}>Next</Link>
             {/* <Link to="/codeCopy">Next</Link> */}
           </nav>
+          <Route exact path="/Application" render={(props) => <About formInputs={this.formParamInputs} {...props} />} />
+
           <Route exact path="/about" render={(props) => <About formInputs={this.formParamInputs} {...props} />} />
 
           <Route path="/styles" render={(props) => <StyleOptions styleInputs={this.styleParamInputs} {...props} />} />
