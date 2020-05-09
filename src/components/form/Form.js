@@ -5,6 +5,7 @@ import About from "../../About";
 import StyleOptions from "../../StyleOptions.js";
 import Application from "../../Application.js";
 import UserProvider from "../../UserProvider";
+import Login from "../../Login.js";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class Form extends Component {
@@ -26,7 +27,9 @@ class Form extends Component {
       color: '',
       font: '',
       background: [],
-      backgroundSelected: ''
+      backgroundSelected: '',
+      // Login user save
+      user: null
     }
   }
 
@@ -112,10 +115,11 @@ class Form extends Component {
     return (
       <Router>
         <div className="formContainer">
-          <UserProvider>
+          {/* <UserProvider>
             <Application />
-          </UserProvider>
+          </UserProvider> */}
           {/* <Application /> */}
+          <Login />
           <nav>
             <Link to={this.handleBackButton}>Back</Link>
             {/* Piece of state to  */}
