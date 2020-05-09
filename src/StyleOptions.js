@@ -119,7 +119,7 @@ export class StyleOptions extends Component {
 
     render() {
         return (
-            <div style={style} className="innerFormContainer">
+            <div style={style} className="innerFormContainer styleOptions">
                 <h1>STYLE OPTIONS</h1>
 
                 {/* this is option for for our font selection */}
@@ -127,42 +127,47 @@ export class StyleOptions extends Component {
                 {/* first five fonts from this article
                 https://www.awwwards.com/20-best-web-fonts-from-google-web-fonts-and-font-face.html*/}
                 <form action="" id="stylesForm">
-                    <label htmlFor="fonts">Select your font</label>
-                    {/* listen for changes */}
-                    <select 
-                        onChange={this.handleChangeFont} 
-                        name="fonts" 
-                        id=""
-                    >
-                        <option defaultChecked="checked" value="empty"></option>
-                        <option value="alegreya">Algreya</option>
-                        <option value="B612">B612</option>
-                        <option value="muli">Muli</option>
-                        <option value="titillium">Titillium Web</option>
-                        <option value="varela">Varela</ option>
-                    </select>
+                    <div>
+                        <label htmlFor="fonts">Select your font</label>
+                        {/* listen for changes */}
+                        <select 
+                            onChange={this.handleChangeFont} 
+                            name="fonts" 
+                            id=""
+                        >
+                            <option defaultChecked="checked" value="empty"></option>
+                            <option value="alegreya">Algreya</option>
+                            <option value="B612">B612</option>
+                            <option value="muli">Muli</option>
+                            <option value="titillium">Titillium Web</option>
+                            <option value="varela">Varela</ option>
+                        </select>
+                    </div>
+                    <div>
 
-                    <label htmlFor="chooseColor">Select your color</label>
-                    {/* every time user passes changes handleChange function activates */}
-                    <select 
-                        onChange={this.handleChangeColor} 
-                        name="color" 
-                        id="color"
-                    >
-                        <option value="empty"></option>
-                        {/* values are equal to api documentation, so don't change them */}
-                        <option value="black_and_white">Black and White</option>
-                        <option value="black">Black</option>
-                        <option value="white">White</option>
-                        <option value="yellow">Yellow</option>
-                        <option value="orange">Orange</option>
-                        <option value="red">Red</option>
-                        <option value="purple">Purple</option>
-                        <option value="magenta">Magenta</option>
-                        <option value="green">Green</option>
-                        <option value="teal">Teal</option>
-                        <option value="blue">Blue</option>
-                    </select>
+                        <label htmlFor="chooseColor">Select your color</label>
+                        {/* every time user passes changes handleChange function activates */}
+                        <select 
+                            onChange={this.handleChangeColor} 
+                            name="color" 
+                            id="color"
+                        >
+                            <option value="empty"></option>
+                            {/* values are equal to api documentation, so don't change them */}
+                            <option value="black_and_white">Black and White</option>
+                            <option value="black">Black</option>
+                            <option value="white">White</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="orange">Orange</option>
+                            <option value="red">Red</option>
+                            <option value="purple">Purple</option>
+                            <option value="magenta">Magenta</option>
+                            <option value="green">Green</option>
+                            <option value="teal">Teal</option>
+                            <option value="blue">Blue</option>
+                        </select>
+                    </div>
+
                     
 
                     {/* reset button */}

@@ -50,7 +50,7 @@ class Preview extends Component {
         
         return(
             
-            <div className="previewSitePage">
+            <div className="previewSitePage innerFormContainer formWrapper">
                 <h1>What do you think?</h1>
                 <div className="wrapper previewViewPort" style={previewStyle}>
                     <div className="decorativeBackSplash">

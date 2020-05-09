@@ -109,8 +109,6 @@ class Form extends Component {
     return (
       <Router>
         <div className="formContainer">
-          <h2>This is a Form</h2>
-          {/* <About /> */}
           <nav>
             <Link to={this.handleBackButton}>Back</Link>
             {/* Piece of state to  */}

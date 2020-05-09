@@ -151,23 +151,16 @@ button {
 }
 button:hover,
 button:focus {
-    translate: 3px -2px;
+    translate: 2px -1px;
     box-shadow:-.5px .5px 5px var(--accentBlue);
-    background-color: var(--accentBlue);
-    color: white;
-
 }
 button.back:hover,
 button.back:focus {
-    translate: -3px -2px;
+    translate: -2px -1px;
     box-shadow:.5px .5px 5px var(--accentBlue);
-      
 }
 
-label {
-    margin: 10px 10px 10px 0;
-    font-size: 16px;
-}
+
 /* User input Area*/
 .formWrapper {
     max-width: 900px;
@@ -180,10 +173,23 @@ label {
     flex-direction: column;
 }
 
+label {
+    margin: 10px 10px 10px 0;
+    font-size: 16px;
+}
+
 input {
     height: 35px;
     border-radius: 2px;
     border: none;
+    font-size: 16.5px;
+    padding-left: 10px;
+}
+
+input:hover,
+input:focus{
+        border: 1px solid darkgray;
+
 }
 
 select { 
