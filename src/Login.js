@@ -60,9 +60,8 @@ class Login extends Component {
     render() {
         return (
             <div>
-                <h1>Authy App, you pain in the ass!</h1>
                 <header>
-                    <h1>Authy App</h1>
+                    <h1>Authy App, you pain in the ass!</h1>
                     {this.state.user ? <button onClick={this.logout}>Log Out</button> : <button onClick={this.login}>Log In</button>}
                     <button onClick={this.anon}>Log In Anon</button>
                 </header>
