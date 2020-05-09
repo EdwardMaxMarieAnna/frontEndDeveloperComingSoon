@@ -6,8 +6,11 @@ class Preview extends Component {
     constructor() {
         super();
         this.state = {
+            //true/false
+            twitterHidden: "",
         }
     }
+    
 
 
 
@@ -15,6 +18,7 @@ class Preview extends Component {
     render() {
 
         // if email, linkedin, twitter, instagram, blog or other are empty 
+        
         // dont show icon
         const firstName = this.props.previewInputs.firstName
         const lastName = this.props.previewInputs.lastName
@@ -24,12 +28,12 @@ class Preview extends Component {
         const twitter = this.props.previewInputs.twitter
         const instagram = this.props.previewInputs.instagram
         const blog = this.props.previewInputs.blog
-        const other = this.props.previewInputs.other
+        const github = this.props.previewInputs.github
         const color = this.props.previewInputs.color
         const background = this.props.previewInputs.background
         const backgroundImage = this.props.previewInputs.backgroundImage
         const font = this.props.previewInputs.font
-        
+
         const previewStyle = {
             width: "90%",
             height: "60%",
@@ -39,6 +43,7 @@ class Preview extends Component {
             backgroundPosition: 'center',
             font: `${font}`
         }
+        // if empty give hidden
 
         
         return(
@@ -49,17 +54,41 @@ class Preview extends Component {
                     <div className="decorativeBackSplash">
                         <h2>Hello I'm {firstName} {lastName}!</h2>
                         <h3>My website is comming soon!</h3>
-                        <h4>{this.state.subtitle}</h4>
+                        <h4>{subtitle}</h4>
                         <ul>
-                            <li>
-                                <a href={`https://twitter.com/${twitter}`}><i className="fab fa-twitter"></i></a>
+                            <li className= {`${this.state.hiddenClass}`}>
+                                <a href={`https://twitter.com/${twitter}`}>
+                                    <i className="fab fa-twitter"></i>
+                                </a>
                             </li>
                             <li>
-                                <a href={`https://www.linkedin.com/in/${linkedIn}`}><i className="fab fa-linkedin-in"></i></a>
+                                <a href={`https://www.linkedin.com/in/${linkedIn}`}>
+                                    <i className="fab fa-linkedin-in"></i>
+                                </a>
                             </li>
                             <li>
-                                <a href={`https://www.instagram.com/${instagram}`}><i className="fab fa-instagram"></i></a>
+                                <a href={`https://www.instagram.com/${instagram}`}>
+                                    <i className="fab fa-instagram"></i>
+                                </a>
                             </li>
+                            <li>
+                                <a href={`https://github.com/${github}`}>
+                                    <i className="fab fa-github"></i>
+                                </a>
+                            </li>
+                            <li >
+                                <a href={`${blog}`}>
+                                    <i className="fab fa-blogger-b"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href={`${email}`}>
+                                    <i className="fab fa-envelope"></i>
+                                </a>
+                            </li>
+
+
+
                         </ul>
                     </div>
                 </div>

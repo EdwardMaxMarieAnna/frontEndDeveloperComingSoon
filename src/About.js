@@ -6,14 +6,14 @@ class About extends Component {
     constructor() {
         super();
         this.state = {
-            firstName: "",
-            lastName: "",
-            subtitle: "",
-            email: "",
-            linkedIn: "",
-            twitter: "",
-            blog: "",
-            other: "",
+                firstName: "",
+                lastName: "",
+                subtitle: "",
+                email: "",
+                linkedIn: "",
+                twitter: "",
+                blog: "",
+                other: "",
         }
     }
 
@@ -91,9 +91,16 @@ class About extends Component {
                         <input type="text" value={this.state.blog} onChange={this.handleOnChange} name="blog" />
                         </div>
 
+                    </fieldset>
+                    <fieldset className="socialMediaTwo">
                         <div>
-                        <label htmlFor="other">Other:</label>
-                        <input type="text" value={this.state.other} onChange={this.handleOnChange} name="other" />
+                            <label htmlFor="other">Blog (full link):</label>
+                            <input type="text" value={this.state.other} onChange={this.handleOnChange} name="other" />
+                        </div>
+
+                        <div>
+                            <label htmlFor="other">Other (full link):</label>
+                            <input type="text" value={this.state.other} onChange={this.handleOnChange} name="other" />
                         </div>
 
                     </fieldset>

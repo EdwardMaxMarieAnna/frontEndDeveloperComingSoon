@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
+
 import Preview from './Preview.js'
 
 import About from "../../About";
 import StyleOptions from "../../StyleOptions.js"
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import StyleOptions from '../../StyleOptions.js';
 
 class Form extends Component {
 
@@ -20,6 +20,7 @@ class Form extends Component {
       email: "",
       linkedIn: "",
       twitter: "",
+      github: "",
       blog: "",
       other: "",
       // StyleOptions params
@@ -98,9 +99,6 @@ class Form extends Component {
     return (
       <Router>
       <div className="formContainer">
-        {/* <About /> */}
-        {/* <StyleOptions /> */}
-        <Preview />
         <nav>
             <Link to={"/about"}>Back</Link>
             {/* Piece of state to  */}

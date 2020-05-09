@@ -156,7 +156,6 @@ button:focus {
     background-color: var(--accentBlue);
     color: white;
 
-<<<<<<< HEAD
 }
 button.back:hover,
 button.back:focus {
@@ -164,8 +163,6 @@ button.back:focus {
     box-shadow:.5px .5px 5px var(--accentBlue);
       
 }
-=======
->>>>>>> master
 
 label {
     margin: 10px 10px 10px 0;

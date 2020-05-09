@@ -22,11 +22,9 @@
     margin-bottom: 10px;
 }
 
-.socialMedia {
+.socialMedia,
+.socialMediaTwo {
     margin-bottom: 10px;
-}
-
-.socialMedia{
     display: flex;
     justify-content: space-between;
 }
@@ -34,5 +32,11 @@
 .socialMedia div {
     display: inline-flex;
     flex-direction: column;
-    width: 24%;
+    width: 32%;
+}
+.socialMediaTwo div{
+    display: inline-flex;
+    flex-direction: column;
+    width: 49%;
+
 }
