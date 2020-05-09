@@ -3,7 +3,6 @@ import Preview from './Preview.js'
 import PasteCode from '../PasteCode'
 import About from "../../About";
 import StyleOptions from "../../StyleOptions.js"
-import Login from "../../Login.js"
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class Form extends Component {

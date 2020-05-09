@@ -1,26 +1,22 @@
-import firebase from firebase;
-// import firebase from "firebase/app";
-// import "firebase/database";
+import firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/firestore";
+
 const API_KEY = process.env.REACT_APP_FIREBASE_API_KEY;
 // Your web app's Firebase configuration
 const firebaseConfig = {
     apiKey: API_KEY,
-    authDomain: "project6-f3485.firebaseapp.com",
-    databaseURL: "https://project6-f3485.firebaseio.com",
-    projectId: "project6-f3485",
-    storageBucket: "project6-f3485.appspot.com",
-    messagingSenderId: "422266070626",
-    appId: "1:422266070626:web:7fc3b7a6f768f1a5a9933b"
+    authDomain: "project6-84919.firebaseapp.com",
+    databaseURL: "https://project6-84919.firebaseio.com",
+    projectId: "project6-84919",
+    storageBucket: "project6-84919.appspot.com",
+    messagingSenderId: "644542789621",
+    appId: "1:644542789621:web:bb1b3509cfa9d95f86d2bc"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
 export const auth = firebase.auth();
-export const database = firebase.database();
-let googleProvider = new firebase.auth.GoogleAuthProvider()
-googleProvider.setCustomParameters({ "prompt": "select_account" });
-export const provider = googleProvider;
-export const dbRef = firebase.database().ref('/');
-export default firebase;
+export const firestore = firebase.firestore();
 
 export default firebase;
