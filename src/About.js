@@ -68,7 +68,7 @@ class About extends Component {
                     </fieldset>
 
                     <fieldset className="subtitle">
-                        <label htmlFor="subtitle">Subtitle:</label>
+                        <label htmlFor="subtitle">Subtitle*:</label>
                         <input type="text" value={this.state.subtitle} onChange={this.handleOnChange} name="subtitle" />
                     </fieldset>
 
