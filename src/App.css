@@ -102,8 +102,22 @@ header {
     flex-direction: column-reverse;
     justify-content: center;
     background-color:var(--background);
+    position: relative;
+}
+.innerFormContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 98%;
+    width: 98%;
 }
 
+
+.formContainer h1 {
+    font-size: 30px;
+    margin: 0 30px 35px;
+    text-align: center;
+}
 /* Nav Area*/
 
 nav {
@@ -124,51 +138,69 @@ nav {
     display: flex;
     margin-bottom: 10px;
 }
+button {
+    margin: 25px 30px;
+    padding: 16px 45px;
+    font-size: 16px;
 
-.firstLastName .firstNameDiv,
-.firstLastName .lastNameDiv {
+    border: 1px solid darkgray;
+    border-radius: 15px;
+    box-shadow: 0 0 1px grey;
+    display: inline-block;
+    transition: width 2s ease-in 3s;  
+}
+button:hover,
+button:focus {
+    translate: 3px -2px;
+    box-shadow:-.5px .5px 5px var(--accentBlue);
+    background-color: var(--accentBlue);
+    color: white;
+
+}
+button.back:hover,
+button.back:focus {
+    translate: -3px -2px;
+    box-shadow:.5px .5px 5px var(--accentBlue);
+      
+}
+
+label {
+    margin: 10px 10px 10px 0;
+    font-size: 16px;
+}
+/* User input Area*/
+.formWrapper {
+    max-width: 900px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.formContainer {
     display: flex;
     flex-direction: column;
-    width: 49%;
 }
 
-
-.firstLastName .lastNameDiv {
-    margin-left: 2%;
+input {
+    height: 35px;
+    border-radius: 2px;
+    border: none;
 }
 
-.subtitle,
-.email {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-}
-
-
-.socialMedia {
-    margin-bottom: 10px;
-}
-
-
-.socialMedia div {
-    display: inline-flex;
-    flex-direction: column;
-    width: 24%;
-    margin-left: 1%;
+select { 
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
 }
 
 .buttonDiv {
+    background-color: white;
     display: flex;
     justify-content: center;
     margin-top: 50px;
-}
-
-.back {
-    margin-right: 2%;
-}
-
-.next {
-    margin-left: 2%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 /* Footer Styles*/
@@ -195,72 +227,4 @@ footer{
 }
 a:hover {
     color:var(--accentBlue);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* bottomNav */
-.bottomNav {
-    height:10%;
-    background-color:white;
-    border-top:2px solid grey;
-    display:flex;
-    align-items:center;
-    justify-content: space-around;
-}
-.bottomNav button {
-    padding:5px 20px;
-    border-radius:25px;
-    font-size:2.0rem;
-    background-color:white;
-}
-/* Copy Paste Section */
-.previewWrapper,
-.CopyPasteWrapper {
-    background-color:var(--background);
-    height:100vh;
-}
-.CopyPasteContainer,
-.previewContainer {
-    width:80%;
-    margin:0 auto;
-    height:90%;
-}
-.CopyPasteTitle{
-    text-align:center;
-    font-size:4.0rem;
-    padding:25px;
-}
-.CopyPasteType {
-    font-size:2.0rem;
-    background-color:var(--sideBackground);
-}
-.CopyPasteEach {
-    width:80%;
-    margin:0 auto;
-}
-textarea {
-    font-size:2.0rem;
-    width:100%;
-    background-color:rgb(11, 13, 44);
-    margin-bottom:50px;
-    color:white;
 }

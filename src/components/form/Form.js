@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Preview from './Preview.js';
 import PasteCode from '../PasteCode';
+import Preview from './Preview.js'
+import PasteCode from '../PasteCode'
 import About from "../../About";
 import StyleOptions from "../../StyleOptions.js";
 import Application from "../../Application.js";
@@ -20,6 +22,7 @@ class Form extends Component {
       email: "",
       linkedIn: "",
       twitter: "",
+      github: "",
       blog: "",
       other: "",
       // StyleOptions params
