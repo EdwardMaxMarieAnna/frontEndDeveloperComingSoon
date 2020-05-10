@@ -1,0 +1,44 @@
+
+/* bottomNav */
+.bottomNav {
+    height:5%;
+    background-color:var(--background);
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+}
+.bottomNav button {
+    padding:5px 20px;
+    border-radius:25px;
+    font-size:2.0rem;
+    background-color:white;
+}
+/* Copy Paste Section */
+.CopyPasteWrapper {
+    background-color:var(--background);
+}
+.CopyPasteContainer {
+    width:80%;
+    margin:0 auto;
+    height:90%;
+}
+.CopyPasteTitle{
+    text-align:center;
+    font-size:4.0rem;
+    padding:25px;
+}
+.CopyPasteType {
+    font-size:2.0rem;
+    background-color:var(--sideBackground);
+}
+.CopyPasteEach {
+    width:90%;
+    margin:0 auto;
+}
+.CopyPasteEach textarea {
+    font-size:1.5rem;
+    width:100%;
+    background-color:rgb(11, 13, 44);
+    margin-bottom:50px;
+    color:white;
+}

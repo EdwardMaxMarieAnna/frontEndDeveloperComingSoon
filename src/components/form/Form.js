@@ -30,7 +30,7 @@ class Form extends Component {
       background: [],
       backgroundSelected: '',
       // Login user save
-      user: null
+      user: null,
       font: '',
 
     }
