@@ -41,7 +41,6 @@ export class StyleOptions extends Component {
         })
     }
 
-
     //on change we are getting options value which matched with API param colour
     handleChangeColor = (event) => {
         event.preventDefault();

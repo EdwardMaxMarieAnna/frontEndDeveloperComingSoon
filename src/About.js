@@ -17,9 +17,19 @@ class About extends Component {
                 other: "",
         }
     }
+
+    //to display user input when he goes back to the previous component
     componentDidMount(){
         this.setState({
             firstName: this.props.globalState.firstName,
+            lastName: this.props.globalState.lastName,
+            subtitle: this.props.globalState.subtitle,
+            email: this.props.globalState.email,
+            linkedIn: this.props.globalState.linkedIn,
+            twitter: this.props.globalState.twitter,
+            instagram: this.props.globalState.instagram,
+            other: this.props.globalState.other
+
         })
     }
 
