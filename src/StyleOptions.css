@@ -15,5 +15,7 @@
     flex-direction: column;
     width: 37%;
 }
-
+.ShowImages img {
+    width:100px;
+} 
 
