@@ -133,7 +133,7 @@ class Form extends Component {
 
           <Route exact path="/Application" render={(props) => <About formInputs={this.formParamInputs} {...props} />} />
 
-          <Route exact path="/about" render={(props) => <About formInputs={this.formParamInputs} {...props} />} />
+          <Route exact path="/about" render={(props) => <About formInputs={this.formParamInputs} globalState={this.state} {...props} />} />
 
           <Route path="/styles" render={(props) => <StyleOptions styleInputs={this.styleParamInputs} {...props} />} />
 
