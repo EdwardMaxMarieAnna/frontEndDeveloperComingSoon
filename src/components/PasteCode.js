@@ -48,23 +48,24 @@ class PasteCode extends Component {
         const fontHTML = (this.state.font === 'Titillium Web') ? "Titillium+Web" : this.state.font
         // adds the line for font change
         const fontFinalCSS = (this.state.font !== '') ? `font-family : '${this.state.font}', ${fontTypeCSS};` : ``
+        // Font in html as a Link file
+        const fontLink = (this.state.font !== '') ? `<link href="https://fonts.googleapis.com/css2?family=${fontHTML}&display=swap" rel="stylesheet"> ` : `<!-- This is where you place custom font links -->`
 
         // Append the twitter with personal link  or placeholder to the soon to be developer on where to place it
-        const linkedIn = (this.state.linkedIn !== '') ? ` <li><a href={https://www.linkedin.com/in/${this.state.linkedIn}><i class="fab fa-linkedin-in"></i></a></li>` : `<!-- Enter your LinkedIn here when you do find it! -->`
-        const twitter = (this.state.twitter !== '') ? ` <li><a href={https://twitter.com/${this.state.twitter}><i class="fab fa-twitter"></i></a></li>` : `<!-- Enter your twitter here when you do find it! -->`
-        const instagram = (this.state.other !== '') ? ` <li><a href={https://www.instagram.com/${this.state.other}><i class="fab fa-instagram"></i></a></li>` : `<!-- Enter your instagram here when you do find it! -->`
-        const github = (this.state.github !== '') ? ` <li><a href={https://www.github.com/${this.state.github}><i class="fab fa-github"></i></a></li>` : `<!-- Enter your github here so people can see your work! -->`
+        const linkedIn = (this.state.linkedIn !== '') ? ` <li><a href=https://www.linkedin.com/in/${this.state.linkedIn}><i class="fab fa-linkedin-in"></i></a></li>` : `<!-- Enter your LinkedIn here when you do find it! -->`
+        const twitter = (this.state.twitter !== '') ? ` <li><a href=https://twitter.com/${this.state.twitter}><i class="fab fa-twitter"></i></a></li>` : `<!-- Enter your twitter here when you do find it! -->`
+        const instagram = (this.state.other !== '') ? ` <li><a href=https://www.instagram.com/${this.state.other}><i class="fab fa-instagram"></i></a></li>` : `<!-- Enter your instagram here when you do find it! -->`
+        const github = (this.state.github !== '') ? ` <li><a href=https://www.github.com/${this.state.github}><i class="fab fa-github"></i></a></li>` : `<!-- Enter your github here so people can see your work! -->`
         const email = (this.state.email !== '') ? ` <li><a href={${this.state.email}}><i class="far fa-envelope"></i></a></li>` : ``
         const blog = (this.state.blog !== '') ? ` <li><a href={${this.state.github}><i class="fab fa-blogger-b"></i></a></li>` : `<!-- Enter your blog here so people can read your work! -->`
 
-        const backgroundImage = (this.state.backgroundSelected !== '') ? `url(${this.state.backgroundSelected});
-    backgroundRepeat: 'no-repeat';
-    backgroundPosition: 'center';`: `/* Background image css would have gone here */`
+        const backgroundImage = (this.state.backgroundSelected !== '') ? `background-image:url("${this.state.backgroundSelected}");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;`: `/* Background image css would have gone here */`
 
         const subtitle = (this.state.subtitle !== '') ? `<h4>${this.state.subtitle}</h4>` : `<!-- where you can put a calling card -->`
 
-        // Font in html as a Link file
-        const fontLink = (this.state.font !== '') ? `<link href="https://fonts.googleapis.com/css2?family=${fontHTML}&display=swap" rel="stylesheet"> ` : `<!-- This is where you place custom font links -->`
 
         return (
             <div className="CopyPasteWrapper">
@@ -140,7 +141,7 @@ a:hover {
     ${backgroundImage}
 }
 .decorativeBackSplash {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(156, 97, 156, 0.9);
     border: 5px double rgba(255, 255, 255, 0.2);
     padding: 50px 100px;
     height:40%;
