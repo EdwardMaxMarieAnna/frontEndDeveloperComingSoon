@@ -27,9 +27,9 @@ export class StyleOptions extends Component {
     bringImages(query, page) {
         axios({
             method: 'GET',
-            url: API_KEY,
+            url: 'https://api.unsplash.com/',
             params: {
-                client_id: "xKKGmMg-rkh2jY_YtDnKWrhn7OirQxRuhXHueyywbdw",
+                client_id: API_KEY,
                 query: 'landing-page-background',
                 color: `${query}`
             }
@@ -41,12 +41,12 @@ export class StyleOptions extends Component {
         })
     }
 
-    
+
     //on change we are getting options value which matched with API param colour
     handleChangeColor = (event) => {
         event.preventDefault();
         const usersColor = event.target.value;
-        
+
         //saving to state
         this.setState({
             color: usersColor,
@@ -77,10 +77,10 @@ export class StyleOptions extends Component {
 
         // using a timeout function to run function as it runs before the state is set causing issues passing props to Form.js
         setTimeout(() => {
-            this.propPasser()            
+            this.propPasser()
         }, 250)
     }
-    
+
     handleImageClick = (event) => {
         event.preventDefault();
         this.setState({
@@ -119,7 +119,7 @@ export class StyleOptions extends Component {
 
     render() {
         return (
-            <div style={style} className="innerFormContainer">
+            <div style={style} className="innerFormContainer styleOptions">
                 <h1>STYLE OPTIONS</h1>
 
                 {/* this is option for for our font selection */}
@@ -127,43 +127,48 @@ export class StyleOptions extends Component {
                 {/* first five fonts from this article
                 https://www.awwwards.com/20-best-web-fonts-from-google-web-fonts-and-font-face.html*/}
                 <form action="" id="stylesForm">
-                    <label htmlFor="fonts">Select your font</label>
-                    {/* listen for changes */}
-                    <select 
-                        onChange={this.handleChangeFont} 
-                        name="fonts" 
-                        id=""
-                    >
-                        <option defaultChecked="checked" value="empty"></option>
-                        <option value="alegreya">Algreya</option>
-                        <option value="B612">B612</option>
-                        <option value="muli">Muli</option>
-                        <option value="titillium">Titillium Web</option>
-                        <option value="varela">Varela</ option>
-                    </select>
+                    <div>
+                        <label htmlFor="fonts">Select your font</label>
+                        {/* listen for changes */}
+                        <select
+                            onChange={this.handleChangeFont}
+                            name="fonts"
+                            id=""
+                        >
+                            <option defaultChecked="checked" value="empty"></option>
+                            <option value="alegreya">Algreya</option>
+                            <option value="B612">B612</option>
+                            <option value="muli">Muli</option>
+                            <option value="titillium">Titillium Web</option>
+                            <option value="varela">Varela</ option>
+                        </select>
+                    </div>
+                    <div>
 
-                    <label htmlFor="chooseColor">Select your color</label>
-                    {/* every time user passes changes handleChange function activates */}
-                    <select 
-                        onChange={this.handleChangeColor} 
-                        name="color" 
-                        id="color"
-                    >
-                        <option value="empty"></option>
-                        {/* values are equal to api documentation, so don't change them */}
-                        <option value="black_and_white">Black and White</option>
-                        <option value="black">Black</option>
-                        <option value="white">White</option>
-                        <option value="yellow">Yellow</option>
-                        <option value="orange">Orange</option>
-                        <option value="red">Red</option>
-                        <option value="purple">Purple</option>
-                        <option value="magenta">Magenta</option>
-                        <option value="green">Green</option>
-                        <option value="teal">Teal</option>
-                        <option value="blue">Blue</option>
-                    </select>
-                    
+                        <label htmlFor="chooseColor">Select your color</label>
+                        {/* every time user passes changes handleChange function activates */}
+                        <select
+                            onChange={this.handleChangeColor}
+                            name="color"
+                            id="color"
+                        >
+                            <option value="empty"></option>
+                            {/* values are equal to api documentation, so don't change them */}
+                            <option value="black_and_white">Black and White</option>
+                            <option value="black">Black</option>
+                            <option value="white">White</option>
+                            <option value="yellow">Yellow</option>
+                            <option value="orange">Orange</option>
+                            <option value="red">Red</option>
+                            <option value="purple">Purple</option>
+                            <option value="magenta">Magenta</option>
+                            <option value="green">Green</option>
+                            <option value="teal">Teal</option>
+                            <option value="blue">Blue</option>
+                        </select>
+                    </div>
+
+
 
                     {/* reset button */}
                     <button className="reset" onClick={this.handleResetClick} type="reset">RESET</button>
@@ -172,14 +177,14 @@ export class StyleOptions extends Component {
 
                 <div>
                     {this.state.background.map((image) => {
-                        return(
+                        return (
                             // there are bunch of other options to select
                             < img
-                                onClick={this.handleImageClick} 
-                                key={`${image.id}`} 
+                                onClick={this.handleImageClick}
+                                key={`${image.id}`}
                                 id={`${image.id}`}
                                 // instead of small can also use small, raw, regular, thumb
-                                src = {`${image.urls.full}`} 
+                                src={`${image.urls.full}`}
                                 alt={`${image.alt_description}`}
                             />
                         )

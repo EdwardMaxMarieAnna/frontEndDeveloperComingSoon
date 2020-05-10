@@ -117,11 +117,11 @@ class Form extends Component {
             <Link to={this.handleNextButton}>Next</Link>
             {/* <Link to="/codeCopy">Next</Link> */}
           </nav>
-          <Route exact path="/about" render={(props) => <About formInputs={this.formParamInputs} {...props} />} />
+          <Route exact path="/about" render={(props) => <About formInputs={this.formParamInputs} currentState={this.state} {...props} />} />
 
           <Route path="/styles" render={(props) => <StyleOptions styleInputs={this.styleParamInputs} {...props} />} />
 
-          <Route path="/preview" render={(props) => <Preview previewInputs={this.stateSomeFunction} {...props} />} />
+          <Route path="/preview" render={(props) => <Preview previewInputs={this.state} {...props} />} />
 
           <Route path="/codeCopy" render={(props) => <PasteCode formInputs={this.state} {...props} />} />
         </div>
