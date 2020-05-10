@@ -30,8 +30,8 @@ class Form extends Component {
       background: [],
       backgroundSelected: '',
       // Login user save
-      user: null
-      font: '',
+      user: null,
+      font: ''
 
     }
   }
@@ -132,7 +132,7 @@ class Form extends Component {
           </nav>
           <Route exact path="/Application" render={(props) => <About formInputs={this.formParamInputs} {...props} />} />
 
-          <Route exact path="/about" render={(props) => <About formInputs={this.formParamInputs} {...props} />} />
+          <Route exact path="/about" render={(props) => <About formInputs={this.formParamInputs} globalState={this.state} {...props} />} />
 
           <Route path="/styles" render={(props) => <StyleOptions styleInputs={this.styleParamInputs} {...props} />} />
 
