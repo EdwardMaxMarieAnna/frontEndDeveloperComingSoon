@@ -122,7 +122,7 @@ class Form extends Component {
             <Application />
           </UserProvider> */}
           {/* <Application /> */}
-          <Login />
+          {/* <Login /> */}
           <nav>
             <Link to={this.handleBackButton}>Back</Link>
             {/* Piece of state to  */}

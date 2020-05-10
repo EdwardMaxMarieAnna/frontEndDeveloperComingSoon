@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
-import axios from 'axios';
-import './StyleOptions.css'
+import React, { Component } from "react";
+import axios from "axios";
+import "./StyleOptions.css";
 
 //hiding api hehehehe
 const API_KEY = process.env.REACT_APP_UNSPLASH_API_KEY;
-
 export class StyleOptions extends Component {
     constructor() {
         super()
@@ -40,6 +39,24 @@ export class StyleOptions extends Component {
             });
         })
     }
+
+    //     bringImages(query, page) {
+//     axios({
+//       method: "GET",
+//       url: `https://api.unsplash.com/search/photos`,
+//       params: {
+//         client_id: `rM6EL9yHvwZfSzdMRI7q91D8-eTxOjxU1dv1olUW_uw`,
+//         query: "landing-page-background",
+//         color: `${query}`,
+//       },
+//     }).then((res) => {
+//       console.log(res.data.results);
+//       this.setState({
+//         background: res.data.results,
+//       });
+//     });
+//   }
+
 
     //on change we are getting options value which matched with API param colour
     handleChangeColor = (event) => {
@@ -172,7 +189,8 @@ export class StyleOptions extends Component {
                     {/* <input onClick={this.handleResetClick} type="reset" value="Reset"/> */}
                 </form>
 
-                <div>
+                <div className="ShowImages">
+
                     {this.state.background.map((image) => {
                         return (
                             // there are bunch of other options to select
@@ -199,7 +217,7 @@ export class StyleOptions extends Component {
 
 //temprorary style
 const style = {
-    backgroundColor: '#E7605C'
-}
+  backgroundColor: "#E7605C",
+};
 
-export default StyleOptions
+export default StyleOptions;
