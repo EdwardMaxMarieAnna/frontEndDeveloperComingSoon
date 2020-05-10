@@ -17,6 +17,11 @@ class About extends Component {
                 other: "",
         }
     }
+    componentDidMount(){
+        this.setState({
+            firstName: this.props.globalState.firstName,
+        })
+    }
 
     onSubmit = (event) => {
         //prevent default page refresh
