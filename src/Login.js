@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import {
+    BrowserRouter as Router,
+    NavLink as Link,
+    Route,
+    Redirect
+} from 'react-router-dom';
 import firebase from './firebase.js';
 
 
@@ -11,6 +17,7 @@ class Login extends Component {
     constructor() {
         super();
         this.state = {
+            logedIn: false,
             user: null
         }
     }
@@ -28,8 +35,10 @@ class Login extends Component {
             .then((result) => {
                 const user = result.user;
                 this.setState({
-                    user
-                });
+                    user,
+                    loggedIn: true
+                })
+                window.location.pathname = '/about';
             });
     }
 
@@ -37,8 +46,10 @@ class Login extends Component {
         auth.signOut()
             .then(() => {
                 this.setState({
-                    user: null
-                });
+                    user: null,
+                    logedIn: false
+                })
+                window.location.pathname = '/';
             });
     }
     
@@ -52,7 +63,8 @@ class Login extends Component {
                 var errorMessage = error.message;
                 console.log(errorCode);
                 console.log(errorMessage);
-            });
+            })
+            window.location.pathname = '/about'
             // ...
 
     }
