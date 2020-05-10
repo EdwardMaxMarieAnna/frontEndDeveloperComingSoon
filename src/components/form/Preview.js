@@ -11,15 +11,38 @@ class Preview extends Component {
       blogHidden: "hidden",
       otherHidden: "hidden",
       color: "",
-      backSplashChange: "",
+      backSplashChanges: "",
     };
   }
   componentDidMount() {
-          if (this.props.previewInputs.color === "pink") {
+        const color = this.props.previewInputs.color
+        if (color === "black_and_white") {
+          this.setState({
+            color: "highContrast",
+            backSplashChanges: "decorativeBackSplash",
+          });
+        }else if( color === "yellow" | color === "orange"){
             this.setState({
-              color: this.props.previewInputs.color,
+                color: "golden",
+                backSplashChanges: "goldenBackSplash"
+            })
+        }else if (color === "white") {
+            this.setState({
+            color: "light",
+            backSplashChanges: "decorativeBackSplash",
             });
-        }
+        } else if( color === "purple" | color === "magenta" | color === "green" | color === "teal" ) {
+            this.setState({
+            color: "mermaid",
+            backSplashChanges: "decorativeBackSplash",
+            });
+        } else if (color === "red" | color === "blue"){
+            this.setState({
+                color: "golden",
+                backSplashChanges: "decorativeBackSplash"
+            })
+        } 
+        
 
     // look at props
     // if email, linkedin, twitter, instagram, blog or other are empty
@@ -80,7 +103,7 @@ class Preview extends Component {
       <div className="previewSitePage innerFormContainer formWrapper">
         <h1>What do you think?</h1>
         <div className="wrapper previewViewPort" style={previewStyle}>
-          <div className="decorativeBackSplash" >
+          <div className={this.state.backSplashChanges}>
             <h2 className={this.state.color}>
               Hello I'm {firstName} {lastName}!
             </h2>
@@ -88,22 +111,34 @@ class Preview extends Component {
             <h4 className={this.state.color}>{subtitle}</h4>
             <ul>
               <li className={this.state.twitterHidden}>
-                <a href={`https://twitter.com/${twitter}`} className={this.state.color} >
+                <a
+                  href={`https://twitter.com/${twitter}`}
+                  className={this.state.color}
+                >
                   <i className="fab fa-twitter"></i>
                 </a>
               </li>
               <li className={this.state.linkedInHidden}>
-                <a href={`https://www.linkedin.com/in/${linkedIn}`} className={this.state.color}>
+                <a
+                  href={`https://www.linkedin.com/in/${linkedIn}`}
+                  className={this.state.color}
+                >
                   <i className="fab fa-linkedin-in"></i>
                 </a>
               </li>
               <li className={this.state.instagramHidden}>
-                <a href={`https://www.instagram.com/${instagram}`} className={this.state.color}>
+                <a
+                  href={`https://www.instagram.com/${instagram}`}
+                  className={this.state.color}
+                >
                   <i className="fab fa-instagram"></i>
                 </a>
               </li>
               <li className={this.state.githubHidden}>
-                <a href={`https://github.com/${github}`} className={this.state.color}>
+                <a
+                  href={`https://github.com/${github}`}
+                  className={this.state.color}
+                >
                   <i className="fab fa-github"></i>
                 </a>
               </li>
@@ -125,10 +160,6 @@ class Preview extends Component {
             </ul>
           </div>
         </div>
-        {/* <div className="buttonDiv">
-          <button className="back">Back</button>
-          <button className="next">Next</button>
-        </div> */}
       </div>
     );
   }
