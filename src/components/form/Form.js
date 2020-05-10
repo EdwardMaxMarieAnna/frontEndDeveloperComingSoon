@@ -32,7 +32,6 @@ class Form extends Component {
       // Login user save
       user: null,
       font: ''
-
     }
   }
 
