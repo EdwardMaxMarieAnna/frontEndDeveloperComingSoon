@@ -23,39 +23,39 @@ export class StyleOptions extends Component {
         this.handleResetClick = this.handleResetClick.bind(this);
     }
     
-    bringImages(query, page) {
-        axios({
-            method: 'GET',
-            url: `https://api.unsplash.com/search/photos`,
-            params: {
-                client_id: API_KEY,
-                query: 'landing-page-background',
-                color: `${query}`
-            }
-        }).then((res) => {
-            console.log(res.data.results)
-            this.setState({
-                background: res.data.results
-            });
-        })
-    }
+    // bringImages(query, page) {
+    //     axios({
+    //         method: 'GET',
+    //         url: `https://api.unsplash.com/search/photos`,
+    //         params: {
+    //             client_id: API_KEY,
+    //             query: 'landing-page-background',
+    //             color: `${query}`
+    //         }
+    //     }).then((res) => {
+    //         console.log(res.data.results)
+    //         this.setState({
+    //             background: res.data.results
+    //         });
+    //     })
+    // }
 
-    //     bringImages(query, page) {
-//     axios({
-//       method: "GET",
-//       url: `https://api.unsplash.com/search/photos`,
-//       params: {
-//         client_id: `rM6EL9yHvwZfSzdMRI7q91D8-eTxOjxU1dv1olUW_uw`,
-//         query: "landing-page-background",
-//         color: `${query}`,
-//       },
-//     }).then((res) => {
-//       console.log(res.data.results);
-//       this.setState({
-//         background: res.data.results,
-//       });
-//     });
-//   }
+        bringImages(query, page) {
+    axios({
+      method: "GET",
+      url: `https://api.unsplash.com/search/photos`,
+      params: {
+        client_id: `rM6EL9yHvwZfSzdMRI7q91D8-eTxOjxU1dv1olUW_uw`,
+        query: "landing-page-background",
+        color: `${query}`,
+      },
+    }).then((res) => {
+      console.log(res.data.results);
+      this.setState({
+        background: res.data.results,
+      });
+    });
+  }
 
 
     //on change we are getting options value which matched with API param colour
@@ -144,7 +144,7 @@ export class StyleOptions extends Component {
                 https://www.awwwards.com/20-best-web-fonts-from-google-web-fonts-and-font-face.html*/}
                 <form action="" id="stylesForm">
                     <div>
-                        <label htmlFor="fonts">Select your font</label>
+                        <label htmlFor="fonts">Select your font*</label>
                         {/* listen for changes */}
                         <select 
                             onChange={this.handleChangeFont} 
@@ -161,7 +161,7 @@ export class StyleOptions extends Component {
                     </div>
                     <div>
 
-                        <label htmlFor="chooseColor">Select your color</label>
+                        <label htmlFor="chooseColor">Select your color*</label>
                         {/* every time user passes changes handleChange function activates */}
 
                         <select 
@@ -188,22 +188,25 @@ export class StyleOptions extends Component {
                     <button className="reset" onClick={this.handleResetClick} type="reset">RESET</button>
                     {/* <input onClick={this.handleResetClick} type="reset" value="Reset"/> */}
                 </form>
-
-                <div className="ShowImages">
-
-                    {this.state.background.map((image) => {
-                        return (
-                            // there are bunch of other options to select
-                            < img
-                                onClick={this.handleImageClick}
-                                key={`${image.id}`}
-                                id={`${image.id}`}
-                                // instead of small can also use small, raw, regular, thumb
-                                src={`${image.urls.full}`}
-                                alt={`${image.alt_description}`}
-                            />
-                        )
-                    })}
+                <div className="imageDiv">
+                    <h2>Pick a background for your site!</h2>
+                    <div className="ShowImages">
+                        {this.state.background.map((image) => {
+                            return (
+                                // there are bunch of other options to select
+                                <div className="imageContainer">
+                                    < img
+                                        onClick={this.handleImageClick}
+                                        key={`${image.id}`}
+                                        id={`${image.id}`}
+                                        // instead of small can also use small, raw, regular, thumb
+                                        src={`${image.urls.full}`}
+                                        alt={`${image.alt_description}`}
+                                    />
+                                </div>
+                            )
+                        })}
+                    </div>
                 </div>
                 {/* <div className="buttonDiv">
                     <button className="back">Back</button>

@@ -15,7 +15,30 @@
     flex-direction: column;
     width: 37%;
 }
+.imageDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.imageDiv h2 {
+    font-size: 20px;
+}
+.ShowImages {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
 .ShowImages img {
-    width:100px;
+    /* width:100px; */
+    /* object-fit: contain; */
+    width: 100%;
 } 
+.imageContainer {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
 

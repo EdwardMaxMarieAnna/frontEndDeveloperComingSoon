@@ -177,7 +177,8 @@ label {
     font-size: 16px;
 }
 
-input {
+input,
+select {
     height: 35px;
     border-radius: 2px;
     border: none;
@@ -186,16 +187,14 @@ input {
 }
 
 input:hover,
-input:focus{
+input:focus,
+select:hover,
+select:focus {
     border: 1px solid darkgray;
     padding-left: 9px;
 }
 
-select { 
-    font-size: 16px;
-    border-radius: 4px;
-    border: none;
-}
+
 
 
 
