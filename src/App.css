@@ -97,21 +97,29 @@ header {
     border-radius: 50%;
 }
 /* Main */
-.formContainer {
+.formContainer ,
+.innerFormContainer{
     display: flex;
-    flex-direction: column-reverse;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.formContainer {
     justify-content: center;
     background-color:var(--background);
     position: relative;
 }
 .innerFormContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     height: 98%;
     width: 98%;
+    margin-top: 10%!important;
 }
-
+.formWrapper {
+    max-width: 900px;
+    width: 95%;
+    margin: 0 auto;
+}
 
 .formContainer h1 {
     font-size: 30px;
@@ -119,25 +127,12 @@ header {
     text-align: center;
 }
 /* Nav Area*/
-
 nav {
     display: flex;
     justify-content: space-evenly;
     font-size: 20px;
 }
 
-/* User input Area*/
-
-.formWrapper {
-    max-width: 900px;
-    width: 95%;
-    margin: 0 auto;
-}
-
-.firstLastName {
-    display: flex;
-    margin-bottom: 10px;
-}
 button {
     margin: 25px 30px;
     padding: 16px 45px;
@@ -151,45 +146,13 @@ button {
 }
 button:hover,
 button:focus {
-    translate: 3px -2px;
+    translate: 2px -1px;
     box-shadow:-.5px .5px 5px var(--accentBlue);
-    background-color: var(--accentBlue);
-    color: white;
-
 }
 button.back:hover,
 button.back:focus {
-    translate: -3px -2px;
+    translate: -2px -1px;
     box-shadow:.5px .5px 5px var(--accentBlue);
-      
-}
-
-label {
-    margin: 10px 10px 10px 0;
-    font-size: 16px;
-}
-/* User input Area*/
-.formWrapper {
-    max-width: 900px;
-    width: 95%;
-    margin: 0 auto;
-}
-
-.formContainer {
-    display: flex;
-    flex-direction: column;
-}
-
-input {
-    height: 35px;
-    border-radius: 2px;
-    border: none;
-}
-
-select { 
-    font-size: 16px;
-    border-radius: 4px;
-    border: none;
 }
 
 .buttonDiv {
@@ -202,6 +165,35 @@ select {
     left: 0;
     right: 0;
 }
+
+/* User input Area*/
+label {
+    margin: 10px 10px 10px 0;
+    font-size: 16px;
+}
+
+input {
+    height: 35px;
+    border-radius: 2px;
+    border: none;
+    font-size: 16.5px;
+    padding-left: 10px;
+}
+
+input:hover,
+input:focus{
+    border: 1px solid darkgray;
+    padding-left: 9px;
+}
+
+select { 
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+}
+
+
+
 
 /* Footer Styles*/
 footer{

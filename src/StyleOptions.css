@@ -1,6 +1,19 @@
 .reset {
-    padding:8px 22.5px;;
-
+    padding:8px 22.5px;
+    border-radius: 11px;
     font-size: 15px;
 }
+
+.styleOptions form  {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.styleOptions form div{
+    display: inline-flex;
+    flex-direction: column;
+    width: 37%;
+}
+
 

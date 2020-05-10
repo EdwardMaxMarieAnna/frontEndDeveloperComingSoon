@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-
 import Preview from './Preview.js'
 import PasteCode from '../PasteCode'
 import About from "../../About";
-import StyleOptions from "../../StyleOptions.js"
+import StyleOptions from "../../StyleOptions.js";
+// import Application from "../../Application.js";
+// import UserProvider from "../../UserProvider";
+import Login from "../../Login.js";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class Form extends Component {
@@ -19,14 +21,18 @@ class Form extends Component {
       email: "",
       linkedIn: "",
       twitter: "",
+      instagram: "",
       github: "",
       blog: "",
       other: "",
       // StyleOptions params
       color: '',
-      font: '',
       background: [],
-      backgroundSelected: ''
+      backgroundSelected: '',
+      // Login user save
+      user: null,
+      font: ''
+
     }
   }
 
@@ -50,6 +56,8 @@ class Form extends Component {
       return backTo = '/styles'
     } else if (page === '/codeCopy') {
       return backTo = '/preview'
+    } else if (page === 'login') {
+      return backTo = 'codeCopy'
     } else {
       return backTo = '/codeCopy'
       // on load opens 'home page', so at least we can move back to last page
@@ -73,6 +81,8 @@ class Form extends Component {
     } else if (page === '/preview') {
       return nextTo = '/codeCopy'
     } else if (page === '/codeCopy') {
+      return nextTo = '/login'
+    } else if (page === '/login') {
       return nextTo = '/about'
     } else {
       return nextTo = '/about'
@@ -108,8 +118,11 @@ class Form extends Component {
     return (
       <Router>
         <div className="formContainer">
-          <h2>This is a Form</h2>
-          {/* <About /> */}
+          {/* <UserProvider>
+            <Application />
+          </UserProvider> */}
+          {/* <Application /> */}
+          <Login />
           <nav>
             <Link to={this.handleBackButton}>Back</Link>
             {/* Piece of state to  */}
@@ -117,7 +130,10 @@ class Form extends Component {
             <Link to={this.handleNextButton}>Next</Link>
             {/* <Link to="/codeCopy">Next</Link> */}
           </nav>
-          <Route exact path="/about" render={(props) => <About formInputs={this.formParamInputs} currentState={this.state} {...props} />} />
+
+          <Route exact path="/Application" render={(props) => <About formInputs={this.formParamInputs} {...props} />} />
+
+          <Route exact path="/about" render={(props) => <About formInputs={this.formParamInputs} {...props} />} />
 
           <Route path="/styles" render={(props) => <StyleOptions styleInputs={this.styleParamInputs} {...props} />} />
 

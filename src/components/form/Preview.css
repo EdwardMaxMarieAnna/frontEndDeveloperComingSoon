@@ -11,14 +11,6 @@
     align-items: center;
 }
 
-.previewSitePage{
-    height: 100%;
-}
-.previewSitePage h1{
-    font-size: 30px;
-    margin: 0 30px 35px;
-}
-
 .previewViewPort {
     width: 90%;
     height: 60%;
@@ -58,7 +50,6 @@
 }
 
 .black_and_white{
-
 
 }
 .black{

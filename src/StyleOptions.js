@@ -130,9 +130,9 @@ export class StyleOptions extends Component {
                     <div>
                         <label htmlFor="fonts">Select your font</label>
                         {/* listen for changes */}
-                        <select
-                            onChange={this.handleChangeFont}
-                            name="fonts"
+                        <select 
+                            onChange={this.handleChangeFont} 
+                            name="fonts" 
                             id=""
                         >
                             <option defaultChecked="checked" value="empty"></option>
@@ -147,9 +147,10 @@ export class StyleOptions extends Component {
 
                         <label htmlFor="chooseColor">Select your color</label>
                         {/* every time user passes changes handleChange function activates */}
-                        <select
-                            onChange={this.handleChangeColor}
-                            name="color"
+
+                        <select 
+                            onChange={this.handleChangeColor} 
+                            name="color" 
                             id="color"
                         >
                             <option value="empty"></option>
@@ -167,9 +168,6 @@ export class StyleOptions extends Component {
                             <option value="blue">Blue</option>
                         </select>
                     </div>
-
-
-
                     {/* reset button */}
                     <button className="reset" onClick={this.handleResetClick} type="reset">RESET</button>
                     {/* <input onClick={this.handleResetClick} type="reset" value="Reset"/> */}
