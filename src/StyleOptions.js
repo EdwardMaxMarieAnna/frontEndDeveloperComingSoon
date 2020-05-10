@@ -208,11 +208,6 @@ export class StyleOptions extends Component {
                         })}
                     </div>
                 </div>
-                {/* <div className="buttonDiv">
-                    <button className="back">Back</button>
-                    <button className="next">Next</button>
-                </div> */}
-
             </div>
         )
     }

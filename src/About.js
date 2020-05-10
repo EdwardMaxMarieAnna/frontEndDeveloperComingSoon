@@ -124,11 +124,7 @@ class About extends Component {
                     <span>*Required Fields</span>
 
                     {/* Previous needs to go back, need to figure out how to override form submit */}
-                    {/* <div className="buttonDiv"> */}
-
-                    {/* <button className="next">Next</button> */}
                     <input type="submit" hidden />
-                    {/* </div> */}
 
                 </form>
             </div>
