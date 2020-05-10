@@ -123,28 +123,56 @@ class Form extends Component {
           </UserProvider> */}
           {/* <Application /> */}
           {/* <Login /> */}
-          <nav>
-            <Link to={this.handleBackButton}>Back</Link>
+
+          <Route
+            exact
+            path="/Application"
+            render={(props) => (
+              <About formInputs={this.formParamInputs} {...props} />
+            )}
+          />
+
+          <Route
+            exact
+            path="/about"
+            render={(props) => (
+              <About
+                formInputs={this.formParamInputs}
+                globalState={this.state}
+                {...props}
+              />
+            )}
+          />
+
+          <Route
+            path="/styles"
+            render={(props) => (
+              <StyleOptions styleInputs={this.styleParamInputs} {...props} />
+            )}
+          />
+
+          <Route
+            path="/preview"
+            render={(props) => (
+              <Preview previewInputs={this.state} {...props} />
+            )}
+          />
+
+          <Route
+            path="/codeCopy"
+            render={(props) => <PasteCode formInputs={this.state} {...props} />}
+          />
+
+          <nav className="buttonDiv">
+            <Link className="button back" to={this.handleBackButton}>Back</Link>
             {/* Piece of state to  */}
             {/* create an array to store the steps and use said array plus the value in state to determine where we are in the flow. */}
-            <Link to={this.handleNextButton}>Next</Link>
+            <Link className="button" to={this.handleNextButton}>Next</Link>
             {/* <Link to="/codeCopy">Next</Link> */}
           </nav>
-
-          <Route exact path="/Application" render={(props) => <About formInputs={this.formParamInputs} {...props} />} />
-
-          <Route exact path="/about" render={(props) => <About formInputs={this.formParamInputs} globalState={this.state} {...props} />} />
-
-          <Route path="/styles" render={(props) => <StyleOptions styleInputs={this.styleParamInputs} {...props} />} />
-
-          <Route path="/preview" render={(props) => <Preview previewInputs={this.state} {...props} />} />
-
-          <Route path="/codeCopy" render={(props) => <PasteCode formInputs={this.state} {...props} />} />
         </div>
-
-
       </Router>
-    )
+    );
   }
 }
 

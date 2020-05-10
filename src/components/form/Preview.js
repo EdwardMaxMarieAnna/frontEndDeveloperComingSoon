@@ -125,10 +125,10 @@ class Preview extends Component {
             </ul>
           </div>
         </div>
-        <div className="buttonDiv">
+        {/* <div className="buttonDiv">
           <button className="back">Back</button>
           <button className="next">Next</button>
-        </div>
+        </div> */}
       </div>
     );
   }

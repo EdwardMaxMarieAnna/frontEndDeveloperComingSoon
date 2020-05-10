@@ -68,7 +68,6 @@ header {
     display: flex;
     flex-direction: column;
     padding-top: 100px;
-    /* justify-content: center; */
 }
 .titleContainer {
     display:flex;
@@ -133,11 +132,13 @@ nav {
     font-size: 20px;
 }
 
-button {
+button,
+.button {
     margin: 25px 30px;
     padding: 16px 45px;
     font-size: 16px;
 
+    color: #161B25;
     border: 1px solid darkgray;
     border-radius: 15px;
     box-shadow: 0 0 1px grey;
@@ -145,12 +146,16 @@ button {
     transition: width 2s ease-in 3s;  
 }
 button:hover,
-button:focus {
+button:focus,
+.button:hover,
+.button:focus{
     translate: 2px -1px;
     box-shadow:-.5px .5px 5px var(--accentBlue);
 }
 button.back:hover,
-button.back:focus {
+button.back:focus,
+.button.back:hover,
+.button.back:focus {
     translate: -2px -1px;
     box-shadow:.5px .5px 5px var(--accentBlue);
 }

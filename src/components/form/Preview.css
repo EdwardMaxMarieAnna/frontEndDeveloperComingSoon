@@ -48,9 +48,9 @@
     font-size: calc(15px + .2vw )
 }
 
-.black_and_white{
+/* .black_and_white{
 
-}
+} */
 .black{
     background-color: black;
     color: white;
@@ -63,13 +63,13 @@
 .yellow {
 background-color: gold;
 }
- .orange{
+ /* .orange{
 
-}
+} */
 .red{
 text-shadow: 2px 2px 8px #FF0000;
 }
-.purple{
+/* .purple{
 
 }
 .magenta{
@@ -86,7 +86,7 @@ text-shadow: 2px 2px 8px #FF0000;
 } 
 .pink{
     color: pink;
-}
+} */
 
 /* create css styles for each style you want
 like if user picks black color this will happen
