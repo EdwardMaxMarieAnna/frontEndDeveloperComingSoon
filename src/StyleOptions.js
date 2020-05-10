@@ -27,9 +27,9 @@ export class StyleOptions extends Component {
     bringImages(query, page) {
         axios({
             method: 'GET',
-            url: API_KEY,
+            url: `https://api.unsplash.com/search/photos`,
             params: {
-                client_id: "xKKGmMg-rkh2jY_YtDnKWrhn7OirQxRuhXHueyywbdw",
+                client_id: API_KEY,
                 query: 'landing-page-background',
                 color: `${query}`
             }
@@ -41,12 +41,11 @@ export class StyleOptions extends Component {
         })
     }
 
-    
     //on change we are getting options value which matched with API param colour
     handleChangeColor = (event) => {
         event.preventDefault();
         const usersColor = event.target.value;
-        
+
         //saving to state
         this.setState({
             color: usersColor,
@@ -77,10 +76,10 @@ export class StyleOptions extends Component {
 
         // using a timeout function to run function as it runs before the state is set causing issues passing props to Form.js
         setTimeout(() => {
-            this.propPasser()            
+            this.propPasser()
         }, 250)
     }
-    
+
     handleImageClick = (event) => {
         event.preventDefault();
         this.setState({
@@ -147,6 +146,7 @@ export class StyleOptions extends Component {
 
                         <label htmlFor="chooseColor">Select your color</label>
                         {/* every time user passes changes handleChange function activates */}
+
                         <select 
                             onChange={this.handleChangeColor} 
                             name="color" 
@@ -167,9 +167,6 @@ export class StyleOptions extends Component {
                             <option value="blue">Blue</option>
                         </select>
                     </div>
-
-                    
-
                     {/* reset button */}
                     <button className="reset" onClick={this.handleResetClick} type="reset">RESET</button>
                     {/* <input onClick={this.handleResetClick} type="reset" value="Reset"/> */}
@@ -177,14 +174,14 @@ export class StyleOptions extends Component {
 
                 <div>
                     {this.state.background.map((image) => {
-                        return(
+                        return (
                             // there are bunch of other options to select
                             < img
-                                onClick={this.handleImageClick} 
-                                key={`${image.id}`} 
+                                onClick={this.handleImageClick}
+                                key={`${image.id}`}
                                 id={`${image.id}`}
                                 // instead of small can also use small, raw, regular, thumb
-                                src = {`${image.urls.full}`} 
+                                src={`${image.urls.full}`}
                                 alt={`${image.alt_description}`}
                             />
                         )

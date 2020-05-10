@@ -32,6 +32,7 @@ class Form extends Component {
       // Login user save
       user: null,
       font: ''
+
     }
   }
 
@@ -129,6 +130,7 @@ class Form extends Component {
             <Link to={this.handleNextButton}>Next</Link>
             {/* <Link to="/codeCopy">Next</Link> */}
           </nav>
+
           <Route exact path="/Application" render={(props) => <About formInputs={this.formParamInputs} {...props} />} />
 
           <Route exact path="/about" render={(props) => <About formInputs={this.formParamInputs} globalState={this.state} {...props} />} />
