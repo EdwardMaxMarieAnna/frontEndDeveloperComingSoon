@@ -116,8 +116,7 @@ class Form extends Component {
   render() {
     // console.log(this.props)
     return (
-      <Router>
-        <div className="formContainer">
+      <div className="formContainer">
           {/* <UserProvider>
             <Application />
           </UserProvider> */}
@@ -171,7 +170,7 @@ class Form extends Component {
             {/* <Link to="/codeCopy">Next</Link> */}
           </nav>
         </div>
-      </Router>
+
     );
   }
 }
