@@ -103,7 +103,7 @@ export class StyleOptions extends Component {
             color: this.state.color,
             background: this.state.background,
             backgroundSelected: event.target.src,
-            font: this.state.backgroundSelected
+            font: this.state.font
         })
 
         // using a timeout function to run function as it runs before the state is set causing issues passing props to Form.js
