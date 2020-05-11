@@ -23,39 +23,38 @@ export class StyleOptions extends Component {
         this.handleResetClick = this.handleResetClick.bind(this);
     }
     
-    bringImages(query, page) {
-        axios({
-            method: 'GET',
-            url: `https://api.unsplash.com/search/photos`,
-            params: {
-                client_id: API_KEY,
-                query: 'landing-page-background',
-                color: `${query}`
-            }
-        }).then((res) => {
-            console.log(res.data.results)
-            this.setState({
-                background: res.data.results
-            });
-        })
-    }
+    // bringImages(query, page) {
+    //     axios({
+    //         method: 'GET',
+    //         url: `https://api.unsplash.com/search/photos`,
+    //         params: {
+    //             client_id: API_KEY,
+    //             query: 'landing-page-background',
+    //             color: `${query}`
+    //         }
+    //     }).then((res) => {
+    //         console.log(res.data.results)
+    //         this.setState({
+    //             background: res.data.results
+    //         });
+    //     })
+    // }
 
-        // bringImages(query, page) {
-//     axios({
-//       method: "GET",
-//       url: `https://api.unsplash.com/search/photos`,
-//       params: {
-//         client_id: `rM6EL9yHvwZfSzdMRI7q91D8-eTxOjxU1dv1olUW_uw`,
-//         query: "landing-page-background",
-//         color: `${query}`,
-//       },
-//     }).then((res) => {
-//       console.log(res.data.results);
-//       this.setState({
-//         background: res.data.results,
-//       });
-//     });
-//   }
+        bringImages(query, page) {
+    axios({
+      method: "GET",
+      url: `https://api.unsplash.com/search/photos`,
+      params: {
+        client_id: `rM6EL9yHvwZfSzdMRI7q91D8-eTxOjxU1dv1olUW_uw`,
+        query: "landing-page-background",
+        color: `${query}`,
+      },
+    }).then((res) => {
+      this.setState({
+        background: res.data.results,
+      });
+    });
+  }
 
 
     //on change we are getting options value which matched with API param colour

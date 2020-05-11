@@ -5,9 +5,7 @@ import { useHistory } from "react-router-dom";
 function NextButton(props) {
   const history = useHistory();
 
-  function handleClick() {
-      console.log('callback')
-    
+  function handleClick() {    
         let page = window.location.pathname;
 
         const isEmpty = (e) => e === "";
@@ -28,7 +26,6 @@ function NextButton(props) {
                     props.currentFormInputs.color,
                     props.currentFormInputs.background,
                     props.currentFormInputs.backgroundSelected,
-                    props.currentFormInputs.font,
                   ].some(isEmpty)
                 ) {
                     alert("Please fill out the required fields.");
