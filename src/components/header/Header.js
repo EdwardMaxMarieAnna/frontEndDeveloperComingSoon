@@ -33,25 +33,25 @@ function Header() {
                 <div className="sectionContainer">
                     <ul>
                         <li>
-                            <NavLink>
+                            <NavLink to="/about">
                             <div className="sectionBubble"></div>
                             </NavLink>
                             <p>Your Information</p>
                         </li>
                         <li>
-                            <NavLink>
+                            <NavLink to="/styles">
                             <div className="sectionBubble"></div>
                             </NavLink>
                             <p>Options</p>
                         </li>
                         <li>
-                            <NavLink>
+                            <NavLink to="/preview">
                             <div className="sectionBubble"></div>
                             </NavLink>
                             <p>Preview</p>
                         </li>
                         <li>
-                            <NavLink>
+                            <NavLink to="/codecopy">
                             <div className="sectionBubble"></div>
                             </NavLink>
                             <p>Save/Submit</p>
