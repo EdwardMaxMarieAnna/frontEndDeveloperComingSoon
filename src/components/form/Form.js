@@ -42,9 +42,6 @@ class Form extends Component {
     //pathname return path we created
     let page = window.location.pathname;
 
-    console.log(window.location);
-    // console.log(page)
-
     let backTo = '';
 
     if (page === '/about') {
@@ -69,8 +66,6 @@ class Form extends Component {
     //pathname return path we created
     let page = window.location.pathname
 
-    // console.log(page)
-
     let nextTo = '';
     //back button on about back doesn't return anythig so don't click it until you add more
     if (page === '/about') {
@@ -93,7 +88,6 @@ class Form extends Component {
   // pass those functions as props to the class components
   // inside class component, on input change, call those props
   formParamInputs = (param) => {
-    console.log(param);
     for (let [key, value] of Object.entries(param)) {
       this.setState({
         [key]: value,
@@ -102,7 +96,6 @@ class Form extends Component {
   };
 
   styleParamInputs = (param) => {
-    console.log(param);
     for (let [key, value] of Object.entries(param)) {
       this.setState({
         [key]: value,
@@ -112,7 +105,6 @@ class Form extends Component {
 
 
   render() {
-    // console.log(this.props)
     return (
       <Router>
         <div className="formContainer">
