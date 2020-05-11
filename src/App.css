@@ -239,6 +239,18 @@ a:hover {
     color:var(--accentBlue);
 }
 
+@media only screen and (max-width: 1300px) {
+        .imageContainer {
+        margin: 4px;
+        height:100px;
+        width:100px;
+    }
+    .ShowImages img{
+        height:100px;
+        width:100px;
+    }
+}
+
 @media only screen and (max-width: 1000px) {
     .sectionContainer {
         width:80%;
@@ -246,8 +258,19 @@ a:hover {
     .landingPage h2 {
         margin-bottom:2rem;
     }
-    .socialMedia div  {
-    display: flex;
-    flex-wrap: wrap;
+    .socialMedia {
+        flex-wrap:wrap;
+    }
+    .styleOptions h1 {
+        margin-bottom:10px;
+    }
+    .imageContainer {
+        margin: 3px;
+        height:90px;
+        width:90px;
+    }
+    .ShowImages img{
+        height:90px;
+        width:90px;
     }
 }

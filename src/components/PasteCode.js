@@ -52,8 +52,8 @@ class PasteCode extends Component {
         const fontLink = (this.state.font !== '') ? `<link href="https://fonts.googleapis.com/css2?family=${fontHTML}&display=swap" rel="stylesheet"> ` : `<!-- This is where you place custom font links -->`
         
         // Color Changing 
-        const color = (this.state.color == 'white') ? `grey;` : `white;`  
-        const backSplash = (this.state.color == 'orange' || this.state.color == 'yellow') ? `rgba(223, 172, 17, 0.59);` : `rgba(255, 255, 255, 0.3);`
+        const color = (this.state.color === 'white') ? `grey;` : `white;`  
+        const backSplash = (this.state.color === 'orange' || this.state.color === 'yellow') ? `rgba(223, 172, 17, 0.59);` : `rgba(255, 255, 255, 0.3);`
         
         // Append the twitter with personal link  or placeholder to the soon to be developer on where to place it
         const linkedIn = (this.state.linkedIn !== '') ? ` <li><a href=https://www.linkedin.com/in/${this.state.linkedIn}><i class="fab fa-linkedin-in"></i></a></li>` : `<!-- Enter your LinkedIn here when you do find it! -->`
