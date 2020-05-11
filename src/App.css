@@ -24,7 +24,6 @@ a {
 p {
     font-size:2.0rem;
 }
-
 .wrapper {
     max-width: 1080px;
     width: 100%;
@@ -36,20 +35,16 @@ p {
     grid-template-columns: 2fr 4fr;
     height: 100vh;
 }
-
 section {
     display: flex;
     justify-content: center;
 }
-
 .mainContent {
     display: flex;
     height: 100vh;
     flex-direction: column;
-    justify-content: center;
-    
+    justify-content: center; 
 }
-
 header {
     background-color:var(--sideBackground);
     text-align:center;
@@ -62,7 +57,6 @@ header img {
     width:50px;
     justify-content:right;
 }
-
 header {
     height: 100%;
     display: flex;
@@ -76,7 +70,6 @@ header {
     align-items:center;
     padding:50px 0;
 }
-
 .sectionContainer {
     width:60%;
     margin:0 auto;
@@ -102,7 +95,6 @@ header {
     justify-content: center;
     flex-direction: column;
 }
-
 .formContainer {
     align-items: center;
     background-color:var(--background);
@@ -119,7 +111,6 @@ header {
     width: 95%;
     margin: 0 auto;
 }
-
 .formContainer h1 {
     font-size: 30px;
     margin: 0 30px 35px;
@@ -131,13 +122,11 @@ nav {
     justify-content: space-evenly;
     font-size: 20px;
 }
-
 button,
 .button {
     margin: 25px 30px;
     padding: 16px 45px;
     font-size: 16px;
-
     color: #161B25;
     border: 1px solid darkgray;
     border-radius: 15px;
@@ -159,7 +148,6 @@ button.back:focus,
     translate: -2px -1px;
     box-shadow:.5px .5px 5px var(--accentBlue);
 }
-
 .buttonDiv {
     background-color: white;
     display: flex;
@@ -170,13 +158,11 @@ button.back:focus,
     left: 0;
     right: 0;
 }
-
 /* User input Area*/
 label {
     margin: 10px 10px 10px 0;
     font-size: 16px;
 }
-
 input,
 select {
     height: 35px;
@@ -185,7 +171,6 @@ select {
     font-size: 16.5px;
     padding-left: 10px;
 }
-
 input:hover,
 input:focus,
 select:hover,
@@ -193,12 +178,6 @@ select:focus {
     border: 1px solid darkgray;
     padding-left: 9px;
 }
-
-
-
-
-
-
 /* Footer Styles*/
 footer{
     background-color:var(--sideBackground);
