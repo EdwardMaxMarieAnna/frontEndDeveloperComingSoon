@@ -74,7 +74,7 @@ class PasteCode extends Component {
         return (
             <div className="CopyPasteWrapper">
                 <div className="CopyPasteContainer">
-                    <h2 tabIndex="0" className="CopyPasteTitle">Ok, all set! <span>Feel free to copy the code</span></h2>
+                    <h1 tabIndex="0" className="CopyPasteTitle">Ok, all set! <span>Feel free to copy the code</span></h1>
                     <div className="CopyPasteEach">
                         <h4 tabIndex="0" id="copyHTML" className="CopyPasteType">HTML</h4>
                         <textarea rows="6" ref={(htmlText) => this.htmlText = htmlText} readOnly value=
@@ -201,10 +201,10 @@ a:hover {
 }`}>
                         </textarea>
                     </div>
-                </div>
                 <div className="bottomNav">
                     <button onClick={this.handleClickHTML}>Save HTML</button>
                     <button onClick={this.handleClickCSS}>Save CSS</button>
+                </div>
                 </div>
             </div>
         )
