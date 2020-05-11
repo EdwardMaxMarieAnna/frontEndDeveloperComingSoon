@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './PasteCode.css';
 
+
 class PasteCode extends Component {
     constructor(props) {
         super(props)
@@ -50,14 +51,18 @@ class PasteCode extends Component {
         const fontFinalCSS = (this.state.font !== '') ? `font-family : '${this.state.font}', ${fontTypeCSS};` : ``
         // Font in html as a Link file
         const fontLink = (this.state.font !== '') ? `<link href="https://fonts.googleapis.com/css2?family=${fontHTML}&display=swap" rel="stylesheet"> ` : `<!-- This is where you place custom font links -->`
-
+        
+        // Color Changing 
+        const color = (this.state.color == 'white') ? `grey;` : `white;`  
+        const backSplash = (this.state.color == 'orange' || this.state.color == 'yellow') ? `rgba(223, 172, 17, 0.59);` : `rgba(255, 255, 255, 0.3);`
+        
         // Append the twitter with personal link  or placeholder to the soon to be developer on where to place it
         const linkedIn = (this.state.linkedIn !== '') ? ` <li><a href=https://www.linkedin.com/in/${this.state.linkedIn}><i class="fab fa-linkedin-in"></i></a></li>` : `<!-- Enter your LinkedIn here when you do find it! -->`
         const twitter = (this.state.twitter !== '') ? ` <li><a href=https://twitter.com/${this.state.twitter}><i class="fab fa-twitter"></i></a></li>` : `<!-- Enter your twitter here when you do find it! -->`
         const instagram = (this.state.other !== '') ? ` <li><a href=https://www.instagram.com/${this.state.other}><i class="fab fa-instagram"></i></a></li>` : `<!-- Enter your instagram here when you do find it! -->`
         const github = (this.state.github !== '') ? ` <li><a href=https://www.github.com/${this.state.github}><i class="fab fa-github"></i></a></li>` : `<!-- Enter your github here so people can see your work! -->`
-        const email = (this.state.email !== '') ? ` <li><a href={${this.state.email}}><i class="far fa-envelope"></i></a></li>` : ``
-        const blog = (this.state.blog !== '') ? ` <li><a href={${this.state.github}><i class="fab fa-blogger-b"></i></a></li>` : `<!-- Enter your blog here so people can read your work! -->`
+        const email = (this.state.email !== '') ? ` <li><a href="mailto: ${this.state.email}"><i class="far fa-envelope"></i></a></li>` : ``
+        const blog = (this.state.blog !== '') ? ` <li><a href=${this.state.github}><i class="fab fa-blogger-b"></i></a></li>` : `<!-- Enter your blog here so people can read your work! -->`
 
         const backgroundImage = (this.state.backgroundSelected !== '') ? `background-image:url("${this.state.backgroundSelected}");
     background-repeat: no-repeat;
@@ -119,7 +124,22 @@ class PasteCode extends Component {
 
 .html {
     ${fontFinalCSS}
-    color:white;
+    color:${color}
+     ${(() => {
+        switch (this.state.color) {
+        case "white": return `text-shadow: 1px 1px 0px rgb(44, 44, 44);`;
+        case "black_and_white": return `text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.24);`;
+        case "yellow": return `text-shadow: 1px 1px 2px rgb(232, 163, 0);`;
+        case "orange": return `text-shadow: 1px 1px 2px rgb(232, 163, 0);`;
+        case "red": return ` text-shadow: 1px 1px 2px rgb(232, 163, 0);`;
+        case "blue": return `text-shadow: 1px 1px 2px rgb(232, 163, 0);`;
+        case "purple": return `text-shadow: 1px 1px .5px rgb(0, 108, 58);`;
+        case "magenta": return `text-shadow: 1px 1px .5px rgb(0, 108, 58);`;
+        case "green": return `text-shadow: 1px 1px .5px rgb(0, 108, 58);`;
+        case "teal": return `text-shadow: 1px 1px .5px rgb(0, 108, 58);`;
+        default: return `text-shadow: 1px 1px 0px rgb(44, 44, 44);`;
+        }
+      })()}
 }
 a {
     color:white;
@@ -141,7 +161,7 @@ a:hover {
     ${backgroundImage}
 }
 .decorativeBackSplash {
-    background-color: rgba(156, 97, 156, 0.9);
+    background-color: ${backSplash}
     border: 5px double rgba(255, 255, 255, 0.2);
     padding: 50px 100px;
     height:40%;
@@ -156,8 +176,20 @@ a:hover {
 .previewViewPort h3,
 .previewViewPort h4 {
     margin: 10px;
-    text-shadow: 1px 1px 0px rgba(173, 173, 173, 0.13);
-    color:white;
+     ${(() => {switch (this.state.color) {
+        case "white": return `text-shadow: 1px 1px 0px rgb(44, 44, 44);`;
+        case "black_and_white": return `text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.24);`;
+        case "yellow": return `text-shadow: 1px 1px 2px rgb(232, 163, 0);`;
+        case "orange": return `text-shadow: 1px 1px 2px rgb(232, 163, 0);`;
+        case "red": return ` text-shadow: 1px 1px 2px rgb(232, 163, 0);`;
+        case "blue": return `text-shadow: 1px 1px 2px rgb(232, 163, 0);`;
+        case "purple": return `text-shadow: 1px 1px .5px rgb(0, 108, 58);`;
+        case "magenta": return `text-shadow: 1px 1px .5px rgb(0, 108, 58);`;
+        case "green": return `text-shadow: 1px 1px .5px rgb(0, 108, 58);`;
+        case "teal": return `text-shadow: 1px 1px .5px rgb(0, 108, 58);`;
+        default: return `text-shadow: 1px 1px 0px rgb(44, 44, 44);`;
+        }
+    })()}
 }
 .previewViewPort h1 {
     font-size: calc(20px + .2vw);

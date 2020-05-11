@@ -23,39 +23,39 @@ export class StyleOptions extends Component {
         this.handleResetClick = this.handleResetClick.bind(this);
     }
     
-    // bringImages(query, page) {
-    //     axios({
-    //         method: 'GET',
-    //         url: `https://api.unsplash.com/search/photos`,
-    //         params: {
-    //             client_id: API_KEY,
-    //             query: 'landing-page-background',
-    //             color: `${query}`
-    //         }
-    //     }).then((res) => {
-    //         console.log(res.data.results)
-    //         this.setState({
-    //             background: res.data.results
-    //         });
-    //     })
-    // }
+    bringImages(query, page) {
+        axios({
+            method: 'GET',
+            url: `https://api.unsplash.com/search/photos`,
+            params: {
+                client_id: API_KEY,
+                query: 'landing-page-background',
+                color: `${query}`
+            }
+        }).then((res) => {
+            console.log(res.data.results)
+            this.setState({
+                background: res.data.results
+            });
+        })
+    }
 
-        bringImages(query, page) {
-    axios({
-      method: "GET",
-      url: `https://api.unsplash.com/search/photos`,
-      params: {
-        client_id: `rM6EL9yHvwZfSzdMRI7q91D8-eTxOjxU1dv1olUW_uw`,
-        query: "landing-page-background",
-        color: `${query}`,
-      },
-    }).then((res) => {
-      console.log(res.data.results);
-      this.setState({
-        background: res.data.results,
-      });
-    });
-  }
+        // bringImages(query, page) {
+//     axios({
+//       method: "GET",
+//       url: `https://api.unsplash.com/search/photos`,
+//       params: {
+//         client_id: `rM6EL9yHvwZfSzdMRI7q91D8-eTxOjxU1dv1olUW_uw`,
+//         query: "landing-page-background",
+//         color: `${query}`,
+//       },
+//     }).then((res) => {
+//       console.log(res.data.results);
+//       this.setState({
+//         background: res.data.results,
+//       });
+//     });
+//   }
 
 
     //on change we are getting options value which matched with API param colour
@@ -103,7 +103,7 @@ export class StyleOptions extends Component {
             color: this.state.color,
             background: this.state.background,
             backgroundSelected: event.target.src,
-            font: this.state.backgroundSelected
+            font: this.state.font
         })
 
         // using a timeout function to run function as it runs before the state is set causing issues passing props to Form.js
@@ -189,7 +189,7 @@ export class StyleOptions extends Component {
                     {/* <input onClick={this.handleResetClick} type="reset" value="Reset"/> */}
                 </form>
                 <div className="imageDiv">
-                    <h2>Pick a background for your site!</h2>
+                    <h2>Pick a background for your site!*</h2>
                     <div className="ShowImages">
                         {this.state.background.map((image) => {
                             return (
@@ -199,8 +199,8 @@ export class StyleOptions extends Component {
                                         onClick={this.handleImageClick}
                                         key={`${image.id}`}
                                         id={`${image.id}`}
-                                        // instead of small can also use small, raw, regular, thumb
-                                        src={`${image.urls.full}`}
+                                        // instead of small can also use full, raw, regular, thumb
+                                        src={`${image.urls.small}`}
                                         alt={`${image.alt_description}`}
                                     />
                                 </div>
@@ -208,6 +208,7 @@ export class StyleOptions extends Component {
                         })}
                     </div>
                 </div>
+                    <span>*Required Fields</span>
             </div>
         )
     }

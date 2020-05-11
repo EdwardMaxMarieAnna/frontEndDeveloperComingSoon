@@ -96,7 +96,7 @@ class Preview extends Component {
     const previewStyle = {
       backgroundImage: `url(${backgroundImage})`,
       bachgroundColor: `${this.state.color}`,
-      font: `${font}`
+      fontFamily: `${font}`
     };
 
     return (
