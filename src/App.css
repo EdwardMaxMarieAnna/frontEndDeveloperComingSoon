@@ -53,6 +53,10 @@ section {
 header {
     background-color:var(--sideBackground);
     text-align:center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
 }
 header h1 {
     font-size:3.0rem;
@@ -63,18 +67,12 @@ header img {
     justify-content:right;
 }
 
-header {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    padding-top: 100px;
-}
 .titleContainer {
     display:flex;
     width:60%;
     margin:0 auto;
     align-items:center;
-    padding:50px 0;
+    padding:0px 0px 25px 0px;
 }
 
 .sectionContainer {
@@ -83,7 +81,7 @@ header {
 }
 .sectionContainer li {
     display:flex;
-    padding:0 0 25px;
+    padding:50px 0 0;
     align-items:center;
 }
 .sectionContainer p {
@@ -97,7 +95,7 @@ header {
 }
 
 .landingPage h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     color: #E7605C;
     margin-bottom: 4rem;
     text-align: left;
@@ -128,7 +126,7 @@ header {
     justify-content: start;
     height: 98%;
     width: 98%;
-    margin-top: 10%!important;
+    margin-top: 50px !important;
 }
 .formWrapper {
     max-width: 900px;
@@ -222,13 +220,13 @@ footer{
 .footerLinks {
     display:grid;
     grid-template-columns:1fr 1fr;
-    width:70%;
+    width:80%;
     margin:0 auto;
 }
 .footerLinks ul {
     display: flex;
-    align-items: left;
-    justify-content:right;
+    align-items: center;
+    justify-content:space-between;
 }
 .footerLinks li {
     padding-left:50px;
@@ -239,4 +237,17 @@ footer{
 }
 a:hover {
     color:var(--accentBlue);
+}
+
+@media only screen and (max-width: 1000px) {
+    .sectionContainer {
+        width:80%;
+    }
+    .landingPage h2 {
+        margin-bottom:2rem;
+    }
+    .socialMedia div  {
+    display: flex;
+    flex-wrap: wrap;
+    }
 }

@@ -1,6 +1,5 @@
 /* bottomNav */
 .bottomNav {
-    height:5%;
     background-color:var(--background);
     display:flex;
     align-items:center;
@@ -11,34 +10,34 @@
     border-radius:25px;
     font-size:2.0rem;
     background-color:white;
+    margin:0;
 }
 /* Copy Paste Section */
 .CopyPasteWrapper {
     background-color:var(--background);
-    margin-top:-50px;
+    margin-top:50px;
+    height:100%;
 }
 .CopyPasteContainer {
-    width:80%;
+    width:100%;
     margin:0 auto;
     height:90%;
 }
 .CopyPasteTitle{
     text-align:center;
     font-size:4.0rem;
-    padding:25px;
+    padding:0 25px;
 }
 .CopyPasteType {
     font-size:2.0rem;
     background-color:var(--sideBackground);
 }
 .CopyPasteEach {
-    width:90%;
-    margin:0 auto;
+    margin:50px auto;
 }
 .CopyPasteEach textarea {
     font-size:1.5rem;
     width:100%;
     background-color:rgb(11, 13, 44);
-    margin-bottom:25px;
     color:white;
 }
