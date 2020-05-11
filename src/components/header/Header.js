@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../../assets/logo.png'
-import { BrowserRouter as NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Header() {
     return (
@@ -12,31 +12,40 @@ function Header() {
             <div className="sectionContainer">
                 <ul>
                     <li>
-                        <div className="sectionBubble"></div>
                     <NavLink to="/about"
                         activeStyle={{
-                            display: "none"
+                            background: "white"
                         }}>
+                        <div className="sectionBubble"></div>
+                    </NavLink>
                         <p>Your Information</p>
-                    </NavLink>
                     </li>
                     <li>
-                    <NavLink to="/styles">
+                    <NavLink to="/styles"
+                            activeStyle={{
+                                background: "white"
+                            }}>
                         <div className="sectionBubble"></div>
+                    </NavLink>
                         <p>Options</p>
-                    </NavLink>
                     </li>
                     <li>
-                    <NavLink to="/preview">
+                    <NavLink to="/preview"
+                            activeStyle={{
+                                background: "white"
+                            }}>
                         <div className="sectionBubble"></div>
+                    </NavLink>
                         <p>Preview</p>
-                    </NavLink>
                     </li>
                     <li>
-                    <NavLink to="/codeCopy">
+                    <NavLink to="/codeCopy"
+                            activeStyle={{
+                                background: "white"
+                            }}>
                         <div className="sectionBubble"></div>
-                        <p>Save/Submit</p>
                     </NavLink>
+                        <p>Save/Submit</p>
                     </li>
                 </ul> 
 
