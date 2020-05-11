@@ -65,32 +65,32 @@ class Form extends Component {
     }
   };
 
-  handleNextButton = () => {
-    //this location is specific object property which comes with Router we imported
-    //it tel us which page user on right now
-    //pathname return path we created
-    let page = window.location.pathname;
+  // handleNextButton = () => {
+  //   //this location is specific object property which comes with Router we imported
+  //   //it tel us which page user on right now
+  //   //pathname return path we created
+  //   let page = window.location.pathname;
 
-    // console.log(page)
+  //   // console.log(page)
 
-    let nextTo = "";
-    //back button on about back doesn't return anythig so don't click it until you add more
-    if (page === "/about") {
-      console.log("next");
-      return (nextTo = "/styles");
-    } else if (page === "/styles") {
-      return (nextTo = "/preview");
-    } else if (page === "/preview") {
-      return (nextTo = "/codeCopy");
-    } else if (page === "/codeCopy") {
-      return (nextTo = "/login");
-    } else if (page === "/login") {
-      return (nextTo = "/about");
-    } else {
-      return (nextTo = "/about");
-      // on load opens 'home page', so at least we can move forward to first page
-    }
-  };
+  //   let nextTo = "";
+  //   //back button on about back doesn't return anythig so don't click it until you add more
+  //   if (page === "/about") {
+  //     console.log("next");
+  //     return (nextTo = "/styles");
+  //   } else if (page === "/styles") {
+  //     return (nextTo = "/preview");
+  //   } else if (page === "/preview") {
+  //     return (nextTo = "/codeCopy");
+  //   } else if (page === "/codeCopy") {
+  //     return (nextTo = "/login");
+  //   } else if (page === "/login") {
+  //     return (nextTo = "/about");
+  //   } else {
+  //     return (nextTo = "/about");
+  //     // on load opens 'home page', so at least we can move forward to first page
+  //   }
+  // };
 
   // create handler functions (handle on change) inside Form to update those pieces of state
   // pass those functions as props to the class components
@@ -171,10 +171,9 @@ class Form extends Component {
             {/* Piece of state to  */}
             <NextButton currentFormInputs={this.state} />
             {/* create an array to store the steps and use said array plus the value in state to determine where we are in the flow. */}
-            <Link className="button" to={this.handleNextButton}>
+            {/* <Link className="button" to={this.handleNextButton}>
               Next
-            </Link>
-            {/* <Link to="/codeCopy">Next</Link> */}
+            </Link> */}
           </nav>
         </div>
       </Router>
