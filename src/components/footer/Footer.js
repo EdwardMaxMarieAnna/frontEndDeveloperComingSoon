@@ -8,8 +8,8 @@ function Footer() {
                 <div className="footerLinks">
                     <img src={logo} alt="Future Developer logo" />
                     <ul>
-                        <li><a href="annacodes.tech"> Anna</a></li>
-                        <li><a href="edwardboland.com">Edward</a></li>
+                        <li><a href="http://annacodes.tech"> Anna</a></li>
+                        <li><a href="http://edwardboland.com">Edward</a></li>
                         <li><a href="tbt.com">Marie</a></li>
                         <li><a href="http://maximilianlau.com">Max</a></li>
                     </ul>
