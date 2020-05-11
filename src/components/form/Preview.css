@@ -1,7 +1,6 @@
 .hidden{
     display: none;
 }
-
 .previewSitePage,
 .previewViewPort,
 .decorativeBackSplash,
@@ -11,7 +10,6 @@
     justify-content: center;
     align-items: center;
 }
-
 .previewViewPort {
     width: 90%;
     height: 60%;
@@ -20,7 +18,6 @@
     background-position: center;
     background-size: cover;
 }
-
 .decorativeBackSplash{
     background-color:rgba(255, 255, 255, 0.2);
     padding: 50px;
@@ -35,25 +32,20 @@
 .previewViewPort h4 {
     margin: 10px;
 }
-
 .previewViewPort h2 {
     font-size: calc(20px + .2vw);
 }
-
 .previewViewPort h3 {
     font-size: calc(16.5px + .2vw );
 }
-
 .previewViewPort h4 {
     font-size: calc(15px + .2vw )
 }
-
 .highContrast{
     color: white;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.24);
     background: #b9b9b9;
 }
-
 .golden {
     color: white;
     text-shadow: 1px 1px 2px rgb(232, 163, 0);
@@ -62,27 +54,11 @@
     background-color: rgba(223, 172, 17, 0.59);
     padding: 50px;
 }
-
 .mermaid{
     color: white;
     text-shadow: 1px 1px .5px rgb(0, 108, 58);
 }
-
 .light{
     color: grey;
     text-shadow: 1px 1px 0px rgb(44, 44, 44);
 } 
-
-
-/* create css styles for each style you want
-like if user picks black color this will happen
-    let blackStyle = 'black';
-    let yellowStyle = 'yellow'
- and etc for every style you want to create
- than put it into long ass if function
-    if (this.props.color === 'black') {
-and you adding class 'black' to your preview page
-    }
-    if(this.props.color === 'yellow')
-here yellow class 'yellow'
-    } */
