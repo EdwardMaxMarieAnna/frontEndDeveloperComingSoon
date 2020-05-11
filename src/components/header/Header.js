@@ -13,7 +13,7 @@ function Header() {
                     <img src={logo} alt="Future Developer logo" />
                     <h1>Future Developer</h1>
                 </div>
-                <div className="sectionContainer">
+                <div className="landingPage sectionContainer">
                     <h2>So we heard rumors that…</h2>
                     <p>You're accessibility guru, flex box master, and your javascript <span>wizards</span> are under control!</p>
                     <p>So you <span>made</span> it! Welcome to the club.</p>

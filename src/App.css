@@ -25,11 +25,11 @@ p {
     font-size:2.0rem;
 }
 
-.wrapper {
+/* .wrapper {
     max-width: 1080px;
     width: 100%;
     margin: 0 auto;
-}
+} */
 /* Side Header Area*/
 .mainGrid {
     display:grid;
@@ -94,6 +94,22 @@ header {
     width:25px;
     height:25px;
     border-radius: 50%;
+}
+
+.landingPage h2 {
+    font-size: 4rem;
+    color: #E7605C;
+    margin-bottom: 4rem;
+    text-align: left;
+}
+
+.landingPage p {
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.landingPage p span {
+    color: #7672F7;
 }
 /* Main */
 .formContainer ,
@@ -211,7 +227,7 @@ footer{
 }
 .footerLinks ul {
     display: flex;
-    align-items: center;
+    align-items: left;
     justify-content:right;
 }
 .footerLinks li {
