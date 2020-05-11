@@ -149,8 +149,8 @@ class Form extends Component {
           <nav className="buttonDiv">
             <Link className="button back" to={this.handleBackButton} onClick={this.props.updateRender}>Back</Link>
 
-            {/* <NextButton currentFormInputs={this.state} /> */}
-            <Link className="button" to={this.handleNextButton} onClick={this.props.updateRender}>Next</Link>
+            <NextButton currentFormInputs={this.state} />
+            {/* <Link className="button" to={this.handleNextButton} onClick={this.props.updateRender}>Next</Link> */}
           </nav>
         </div>
         </Router>
