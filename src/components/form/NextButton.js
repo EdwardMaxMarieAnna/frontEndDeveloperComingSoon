@@ -23,12 +23,13 @@ function NextButton(props) {
             history.push("/styles");
         }
         } else if (page === "/styles") {
+                        console.log(props, "props");
+
                 if (
                   [
                     props.currentFormInputs.color,
                     props.currentFormInputs.background,
                     props.currentFormInputs.backgroundSelected,
-                    props.currentFormInputs.font,
                   ].some(isEmpty)
                 ) {
                     alert("Please fill out the required fields.");

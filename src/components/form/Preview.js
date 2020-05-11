@@ -16,7 +16,7 @@ class Preview extends Component {
   }
   componentDidMount() {
         const color = this.props.previewInputs.color
-        if (color === "black_and_white") {
+        if (color === "black_and_white" | color === "black") {
           this.setState({
             color: "highContrast",
             backSplashChanges: "decorativeBackSplash",
