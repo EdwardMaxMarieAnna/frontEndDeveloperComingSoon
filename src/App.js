@@ -13,6 +13,11 @@ class App extends Component {
     this.state = {
     }
   }
+
+    updateRender = () => {
+    // Force a render without state change
+    this.forceUpdate();
+  }
   
   render() {
     return (
@@ -20,7 +25,7 @@ class App extends Component {
         <div className="mainGrid">
         <Header />
 
-        <Form />
+        <Form updateRender={this.updateRender}/>
         </div>
         <Footer />
       </div>
