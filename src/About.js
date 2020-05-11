@@ -104,15 +104,19 @@ class About extends Component {
                         </div>
 
                         <div>
-                        <label htmlFor="blog">GitHub:</label>
-                            <input type="text" value={this.state.blog} onChange={this.handleOnChange} name="blog" placeholder="@userName"/>
+                        <label htmlFor="github">GitHub:</label>
+                            <input type="text" value={this.state.github} onChange={this.handleOnChange} name="github" placeholder="@userName"/>
                         </div>
 
                     </fieldset>
-                    <fieldset className="socialMediaTwo">
+                    <fieldset className="socialMedia">
+                        <div>
+                        <label htmlFor="instagram">Instagram:</label>
+                            <input type="text" value={this.state.instagram} onChange={this.handleOnChange} name="instagram" placeholder="@userName" />
+                        </div>
                         <div>
                             <label htmlFor="blog">Blog:</label>
-                            <input type="text" value={this.state.other} onChange={this.handleOnChange} name="blog"  placeholder="https://fullwebsiteurl.com"/>
+                            <input type="text" value={this.state.blog} onChange={this.handleOnChange} name="blog"  placeholder="https://fullwebsiteurl.com"/>
                         </div>
 
                         <div>
