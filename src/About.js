@@ -54,12 +54,12 @@ class About extends Component {
 
 
     //below is to test simplified data collection. By setting nam in an array we can take the val of any input. Saving that to a unique state is the part I so far can't figure out.
-    handleOnChange = (event) => {
+    handleOnChange = async(event) => {
         // console.log(event.target.value);
         // setting the name and val to their own variables allows us to set them to their own states without having to write multiple setStates for each form input.
         let inputName = event.target.name
         let val = event.target.value
-        this.setState({
+        await this.setState({
             [inputName]: val
         })
         this.props.formInputs(this.state)
