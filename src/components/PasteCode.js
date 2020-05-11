@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './PasteCode.css';
 
+
 class PasteCode extends Component {
     constructor(props) {
         super(props)
@@ -124,6 +125,21 @@ class PasteCode extends Component {
 .html {
     ${fontFinalCSS}
     color:${color}
+     ${(() => {
+        switch (this.state.color) {
+        case "white": return `text-shadow: 1px 1px 0px rgb(44, 44, 44);`;
+        case "black_and_white": return `text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.24);`;
+        case "yellow": return `text-shadow: 1px 1px 2px rgb(232, 163, 0);`;
+        case "orange": return `text-shadow: 1px 1px 2px rgb(232, 163, 0);`;
+        case "red": return ` text-shadow: 1px 1px 2px rgb(232, 163, 0);`;
+        case "blue": return `text-shadow: 1px 1px 2px rgb(232, 163, 0);`;
+        case "purple": return `text-shadow: 1px 1px .5px rgb(0, 108, 58);`;
+        case "magenta": return `text-shadow: 1px 1px .5px rgb(0, 108, 58);`;
+        case "green": return `text-shadow: 1px 1px .5px rgb(0, 108, 58);`;
+        case "teal": return `text-shadow: 1px 1px .5px rgb(0, 108, 58);`;
+        default: return `text-shadow: 1px 1px 0px rgb(44, 44, 44);`;
+        }
+      })()}
 }
 a {
     color:white;
@@ -160,8 +176,20 @@ a:hover {
 .previewViewPort h3,
 .previewViewPort h4 {
     margin: 10px;
-    text-shadow: 1px 1px 0px rgba(173, 173, 173, 0.13);
-    color:white;
+     ${(() => {switch (this.state.color) {
+        case "white": return `text-shadow: 1px 1px 0px rgb(44, 44, 44);`;
+        case "black_and_white": return `text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.24);`;
+        case "yellow": return `text-shadow: 1px 1px 2px rgb(232, 163, 0);`;
+        case "orange": return `text-shadow: 1px 1px 2px rgb(232, 163, 0);`;
+        case "red": return ` text-shadow: 1px 1px 2px rgb(232, 163, 0);`;
+        case "blue": return `text-shadow: 1px 1px 2px rgb(232, 163, 0);`;
+        case "purple": return `text-shadow: 1px 1px .5px rgb(0, 108, 58);`;
+        case "magenta": return `text-shadow: 1px 1px .5px rgb(0, 108, 58);`;
+        case "green": return `text-shadow: 1px 1px .5px rgb(0, 108, 58);`;
+        case "teal": return `text-shadow: 1px 1px .5px rgb(0, 108, 58);`;
+        default: return `text-shadow: 1px 1px 0px rgb(44, 44, 44);`;
+        }
+    })()}
 }
 .previewViewPort h1 {
     font-size: calc(20px + .2vw);
