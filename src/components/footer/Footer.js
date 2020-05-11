@@ -6,12 +6,12 @@ function Footer() {
         <footer>
             <div className="wrapper">
                 <div className="footerLinks">
-                    <img src={logo} alt="Future Developer logo" />
                     <ul>
-                        <li><a href="mmm.com">ANNA</a></li>
-                        <li><a href="https.com">EDWARD</a></li>
-                        <li><a href="lslsl.com">MARIE</a></li>
-                        <li><a href="http://maximilianlau.com">MAX</a></li>
+                    <img src={logo} alt="Future Developer logo" />
+                        <li><a href="annacodes.tech"> Anna</a></li>
+                        <li><a href="edwardboland.com">Edward</a></li>
+                        <li><a href="tbt.com">Marie</a></li>
+                        <li><a href="http://maximilianlau.com">Max</a></li>
                     </ul>
                 </div>
             </div>
