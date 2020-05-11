@@ -2,6 +2,7 @@ import React from 'react';
 import logo from '../../assets/logo.png'
 import { NavLink } from "react-router-dom";
 
+
 function Header() {
     console.log(window)
     console.log(window.location.pathname)

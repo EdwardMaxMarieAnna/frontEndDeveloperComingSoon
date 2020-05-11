@@ -1,17 +1,9 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import {
-    BrowserRouter as Router,
-    NavLink as Link,
-    Route,
-    Redirect
-} from 'react-router-dom';
 import firebase from './firebase.js';
 
 
 const provider = new firebase.auth.GoogleAuthProvider();
 const auth = firebase.auth();
-
 
 class Login extends Component {
     constructor() {
@@ -56,15 +48,12 @@ class Login extends Component {
     anon = () => {
         firebase.auth().signInAnonymously()
             .then(function () {
-                console.log('Logged in as Anonymous!')
 
             }).catch(function (error) {
                 var errorCode = error.code;
                 var errorMessage = error.message;
-                console.log(errorCode);
-                console.log(errorMessage);
             })
-            //This breaks anon login. Runs faster than server
+            //This breaks anon login. Runs faster than server leaving for now as it is needed to work app
             window.location.pathname = '/about'
     }
 
