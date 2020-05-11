@@ -6,7 +6,7 @@ import StyleOptions from "../../StyleOptions.js";
 import Login from "../../Login.js";
 import NextButton from "./NextButton.js";
 
-import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 
 class Form extends Component {
