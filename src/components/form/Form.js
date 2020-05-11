@@ -44,16 +44,15 @@ class Form extends Component {
 
     let backTo = '';
 
+    //removed login page from if loop as it breaks in live. Works locally.
     if (page === '/about') {
-      return backTo = '/login'
+      return backTo = '/codeCopy'
     } else if (page === '/styles') {
       return backTo = '/about'
     } else if (page === '/preview') {
       return backTo = '/styles'
     } else if (page === '/codeCopy') {
       return backTo = '/preview'
-    } else if (page === '/login') {
-      return backTo = '/login'
     } else {
       return (backTo = "/codeCopy");
     }
@@ -66,6 +65,7 @@ class Form extends Component {
     //pathname return path we created
     let page = window.location.pathname
 
+    //removed login page from if loop as it breaks in live. Works locally.
     let nextTo = '';
     if (page === '/about') {
       return nextTo = '/styles'
@@ -74,9 +74,7 @@ class Form extends Component {
     } else if (page === '/preview') {
       return nextTo = '/codeCopy'
     } else if (page === '/codeCopy') {
-      return nextTo = '/codeCopy'
-    } else if (page === '/login') {
-      return nextTo = '/login'
+      return nextTo = '/about'
     } else {
       return nextTo = '/about'
     }
