@@ -71,11 +71,10 @@ class Login extends Component {
     render() {
         return (
             <div>
-                <header>
-                    <h1>Authy App, you pain in the ass!</h1>
+                    <h1>Welcome</h1>
                     <button onClick={this.anon}>Log In Anon</button>
                     {this.state.user ? <button onClick={this.logout}>Log Out</button> : <button onClick={this.login}>Log In</button>}
-                </header>
+
             </div>
         )
     }
