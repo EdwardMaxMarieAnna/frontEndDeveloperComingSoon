@@ -51,8 +51,6 @@ class About extends Component {
         })
     }
 
-
-    //below is to test simplified data collection. By setting nam in an array we can take the val of any input. Saving that to a unique state is the part I so far can't figure out.
     handleOnChange = async(event) => {
         // setting the name and val to their own variables allows us to set them to their own states without having to write multiple setStates for each form input.
         let inputName = event.target.name
@@ -125,7 +123,6 @@ class About extends Component {
                     </fieldset>
                     <span>*Required Fields</span>
 
-                    {/* Previous needs to go back, need to figure out how to override form submit */}
                     <input type="submit" hidden />
 
                 </form>

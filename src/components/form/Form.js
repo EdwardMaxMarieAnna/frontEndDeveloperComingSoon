@@ -6,7 +6,7 @@ import StyleOptions from "../../StyleOptions.js";
 import Login from "../../Login.js";
 import NextButton from "./NextButton.js";
 
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
 
 
 class Form extends Component {
@@ -56,10 +56,10 @@ class Form extends Component {
       return backTo = '/login'
     } else {
       return (backTo = "/codeCopy");
-      // on load opens 'home page', so at least we can move back to last page
     }
   }
 
+  //listen for a click on next  button
   handleNextButton = () => {
     //this location is specific object property which comes with Router we imported
     //it tel us which page user on right now
@@ -67,7 +67,6 @@ class Form extends Component {
     let page = window.location.pathname
 
     let nextTo = '';
-    //back button on about back doesn't return anythig so don't click it until you add more
     if (page === '/about') {
       return nextTo = '/styles'
     } else if (page === '/styles') {
@@ -80,7 +79,6 @@ class Form extends Component {
       return nextTo = '/login'
     } else {
       return nextTo = '/about'
-      // on load opens 'home page', so at least we can move forward to first page
     }
   }
 
@@ -108,7 +106,6 @@ class Form extends Component {
     return (
       <Router>
         <div className="formContainer">
-          {/* <Login /> */}
 
           <Route
             exact
@@ -153,11 +150,9 @@ class Form extends Component {
 
           <nav className="buttonDiv">
             <Link className="button back" to={this.handleBackButton} onClick={this.props.updateRender}>Back</Link>
-            {/* Piece of state to  */}
+
             {/* <NextButton currentFormInputs={this.state} /> */}
-            {/* create an array to store the steps and use said array plus the value in state to determine where we are in the flow. */}
             <Link className="button" to={this.handleNextButton} onClick={this.props.updateRender}>Next</Link>
-            {/* <Link to="/codeCopy">Next</Link> */}
           </nav>
         </div>
         </Router>

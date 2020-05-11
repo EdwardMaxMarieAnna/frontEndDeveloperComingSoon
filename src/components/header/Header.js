@@ -1,6 +1,5 @@
 import React from 'react';
 import logo from '../../assets/logo.png'
-import { BrowserRouter as NavLink } from "react-router-dom";
 
 function Header() {
     console.log(window)
