@@ -189,7 +189,7 @@ export class StyleOptions extends Component {
                     {/* <input onClick={this.handleResetClick} type="reset" value="Reset"/> */}
                 </form>
                 <div className="imageDiv">
-                    <h2>Pick a background for your site!</h2>
+                    <h2>Pick a background for your site!*</h2>
                     <div className="ShowImages">
                         {this.state.background.map((image) => {
                             return (
@@ -208,6 +208,7 @@ export class StyleOptions extends Component {
                         })}
                     </div>
                 </div>
+                    <span>*Required Fields</span>
             </div>
         )
     }
