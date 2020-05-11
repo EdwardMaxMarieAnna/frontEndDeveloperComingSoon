@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/frontEndDeveloperComingSoon/static/css/main.29aab227.chunk.css",
-    "main.js": "/frontEndDeveloperComingSoon/static/js/main.a1c7e439.chunk.js",
-    "main.js.map": "/frontEndDeveloperComingSoon/static/js/main.a1c7e439.chunk.js.map",
+    "main.css": "/frontEndDeveloperComingSoon/static/css/main.c9423e3d.chunk.css",
+    "main.js": "/frontEndDeveloperComingSoon/static/js/main.543ce12e.chunk.js",
+    "main.js.map": "/frontEndDeveloperComingSoon/static/js/main.543ce12e.chunk.js.map",
     "runtime-main.js": "/frontEndDeveloperComingSoon/static/js/runtime-main.707273f2.js",
     "runtime-main.js.map": "/frontEndDeveloperComingSoon/static/js/runtime-main.707273f2.js.map",
-    "static/js/2.f0d165e0.chunk.js": "/frontEndDeveloperComingSoon/static/js/2.f0d165e0.chunk.js",
-    "static/js/2.f0d165e0.chunk.js.map": "/frontEndDeveloperComingSoon/static/js/2.f0d165e0.chunk.js.map",
+    "static/js/2.454b8516.chunk.js": "/frontEndDeveloperComingSoon/static/js/2.454b8516.chunk.js",
+    "static/js/2.454b8516.chunk.js.map": "/frontEndDeveloperComingSoon/static/js/2.454b8516.chunk.js.map",
     "index.html": "/frontEndDeveloperComingSoon/index.html",
-    "precache-manifest.29fedba9007b93dc052b80609d007c6f.js": "/frontEndDeveloperComingSoon/precache-manifest.29fedba9007b93dc052b80609d007c6f.js",
+    "precache-manifest.4f4072ec60828ab917f8bcc355b76603.js": "/frontEndDeveloperComingSoon/precache-manifest.4f4072ec60828ab917f8bcc355b76603.js",
     "service-worker.js": "/frontEndDeveloperComingSoon/service-worker.js",
-    "static/css/main.29aab227.chunk.css.map": "/frontEndDeveloperComingSoon/static/css/main.29aab227.chunk.css.map",
-    "static/js/2.f0d165e0.chunk.js.LICENSE.txt": "/frontEndDeveloperComingSoon/static/js/2.f0d165e0.chunk.js.LICENSE.txt",
+    "static/css/main.c9423e3d.chunk.css.map": "/frontEndDeveloperComingSoon/static/css/main.c9423e3d.chunk.css.map",
+    "static/js/2.454b8516.chunk.js.LICENSE.txt": "/frontEndDeveloperComingSoon/static/js/2.454b8516.chunk.js.LICENSE.txt",
     "static/media/logo.png": "/frontEndDeveloperComingSoon/static/media/logo.ad25eba7.png"
   },
   "entrypoints": [
     "static/js/runtime-main.707273f2.js",
-    "static/js/2.f0d165e0.chunk.js",
-    "static/css/main.29aab227.chunk.css",
-    "static/js/main.a1c7e439.chunk.js"
+    "static/js/2.454b8516.chunk.js",
+    "static/css/main.c9423e3d.chunk.css",
+    "static/js/main.543ce12e.chunk.js"
   ]
 }
