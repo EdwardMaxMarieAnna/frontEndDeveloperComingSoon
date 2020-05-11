@@ -44,9 +44,6 @@ class Form extends Component {
     //pathname return path we created
     let page = window.location.pathname;
 
-    console.log(window.location);
-    // console.log(page)
-
     let backTo = "";
 
     if (page === "/about") {
@@ -65,38 +62,10 @@ class Form extends Component {
     }
   };
 
-  // handleNextButton = () => {
-  //   //this location is specific object property which comes with Router we imported
-  //   //it tel us which page user on right now
-  //   //pathname return path we created
-  //   let page = window.location.pathname;
-
-  //   // console.log(page)
-
-  //   let nextTo = "";
-  //   //back button on about back doesn't return anythig so don't click it until you add more
-  //   if (page === "/about") {
-  //     console.log("next");
-  //     return (nextTo = "/styles");
-  //   } else if (page === "/styles") {
-  //     return (nextTo = "/preview");
-  //   } else if (page === "/preview") {
-  //     return (nextTo = "/codeCopy");
-  //   } else if (page === "/codeCopy") {
-  //     return (nextTo = "/login");
-  //   } else if (page === "/login") {
-  //     return (nextTo = "/about");
-  //   } else {
-  //     return (nextTo = "/about");
-  //     // on load opens 'home page', so at least we can move forward to first page
-  //   }
-  // };
-
   // create handler functions (handle on change) inside Form to update those pieces of state
   // pass those functions as props to the class components
   // inside class component, on input change, call those props
   formParamInputs = (param) => {
-    console.log(param);
     for (let [key, value] of Object.entries(param)) {
       this.setState({
         [key]: value,
@@ -105,7 +74,6 @@ class Form extends Component {
   };
 
   styleParamInputs = (param) => {
-    console.log(param);
     for (let [key, value] of Object.entries(param)) {
       this.setState({
         [key]: value,
@@ -115,7 +83,6 @@ class Form extends Component {
 
 
   render() {
-    // console.log(this.props)
     return (
       <div className="formContainer">
           {/* <UserProvider>

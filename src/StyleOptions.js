@@ -50,7 +50,6 @@ export class StyleOptions extends Component {
         color: `${query}`,
       },
     }).then((res) => {
-      console.log(res.data.results);
       this.setState({
         background: res.data.results,
       });
@@ -98,7 +97,6 @@ export class StyleOptions extends Component {
     }
 
     handleImageClick = (event) => {
-        console.log('imgclk');
         event.preventDefault();
         this.setState({
             color: this.state.color,

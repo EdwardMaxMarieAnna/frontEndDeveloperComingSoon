@@ -5,9 +5,7 @@ import { useHistory } from "react-router-dom";
 function NextButton(props) {
   const history = useHistory();
 
-  function handleClick() {
-      console.log('callback')
-    
+  function handleClick() {    
         let page = window.location.pathname;
 
         const isEmpty = (e) => e === "";
@@ -23,8 +21,6 @@ function NextButton(props) {
             history.push("/styles");
         }
         } else if (page === "/styles") {
-                        console.log(props, "props");
-
                 if (
                   [
                     props.currentFormInputs.color,
