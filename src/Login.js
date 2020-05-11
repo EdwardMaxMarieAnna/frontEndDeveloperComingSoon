@@ -49,7 +49,7 @@ class Login extends Component {
                     user: null,
                     logedIn: false
                 })
-                window.location.pathname = '/';
+                window.location.pathname = '/login';
             });
     }
     
@@ -64,9 +64,8 @@ class Login extends Component {
                 console.log(errorCode);
                 console.log(errorMessage);
             })
+            //This breaks anon login. Runs faster than server
             window.location.pathname = '/about'
-            // ...
-
     }
 
     render() {
@@ -74,8 +73,8 @@ class Login extends Component {
             <div>
                 <header>
                     <h1>Authy App, you pain in the ass!</h1>
-                    {this.state.user ? <button onClick={this.logout}>Log Out</button> : <button onClick={this.login}>Log In</button>}
                     <button onClick={this.anon}>Log In Anon</button>
+                    {this.state.user ? <button onClick={this.logout}>Log Out</button> : <button onClick={this.login}>Log In</button>}
                 </header>
             </div>
         )
