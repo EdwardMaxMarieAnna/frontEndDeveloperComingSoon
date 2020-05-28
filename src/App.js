@@ -37,7 +37,9 @@ class App extends Component {
       backgroundSelected: "",
       // Login user save
       user: null,
+      logedIn: false,
       font: '',
+      showLogin: true,
     }
   }
 
@@ -107,7 +109,7 @@ class App extends Component {
 
     updateRender = () => {
     // Force a render without state change
-    this.forceUpdate();
+    // this.forceUpdate();
   }
 
   componentDidMount() {
@@ -116,6 +118,17 @@ class App extends Component {
         this.setState({ user });
       }
     });
+    // this.setState({
+    //   showLogin: true,
+    // })
+  }
+
+  componentDidUpdate() {
+    if (this.state.showLogin === true) {
+      this.setState({
+        showLogin: false
+      })
+    }
   }
 
   login = () => {
@@ -124,7 +137,8 @@ class App extends Component {
         const user = result.user;
         this.setState({
           user,
-          loggedIn: true
+          loggedIn: true,
+          showLogin: false
         })
         window.location.pathname = '/about';
       });
@@ -135,9 +149,10 @@ class App extends Component {
       .then(() => {
         this.setState({
           user: null,
-          logedIn: false
+          logedIn: false,
+          showLogin: true,
         })
-        window.location.pathname = '/login';
+        window.location.pathname = '/';
       });
   }
 
@@ -149,7 +164,10 @@ class App extends Component {
         var errorCode = error.code;
         var errorMessage = error.message;
       })
+    
+  
     //This breaks anon login. Runs faster than server leaving for now as it is needed to work app
+
     window.location.pathname = '/about'
   }
   
@@ -165,13 +183,18 @@ class App extends Component {
             
               <div className="formContainer">
 
-                <div>
+                {/* Below code will hide the div is showLogin is false. Issue is having show login as false after everything is rendered */}
+                {/* {this.state.showLogin ?
+                <div className="loginForm">
                   <h1>Welcome</h1>
                   <button onClick={this.anon}>Log In Anon</button>
                   {this.state.user ? <button onClick={this.logout}>Log Out</button> : <button onClick={this.login}>Log In</button>}
 
-                </div>
+                  </div> 
+                  : null} */}
 
+                {this.state.showLogin ? <Login /> : null}
+                
                 <Route
                   exact
                   path="/Application"
