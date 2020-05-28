@@ -40,6 +40,7 @@ class App extends Component {
       logedIn: false,
       font: '',
       showLogin: true,
+      showButton: false,
     }
   }
 
@@ -118,15 +119,14 @@ class App extends Component {
         this.setState({ user });
       }
     });
-    // this.setState({
-    //   showLogin: true,
-    // })
-  }
-
-  componentDidUpdate() {
-    if (this.state.showLogin === true) {
+    if (window.location.pathname === '/about' || window.location.pathname === '/styles' || window.location.pathname === '/preview' || window.location.pathname === '/codeCopy') {
       this.setState({
         showLogin: false
+      })
+    }
+    if (window.location.pathname === '/about' || window.location.pathname === '/styles' || window.location.pathname === '/preview' || window.location.pathname === '/codeCopy') {
+      this.setState({
+        showButton:true
       })
     }
   }
@@ -184,16 +184,16 @@ class App extends Component {
               <div className="formContainer">
 
                 {/* Below code will hide the div is showLogin is false. Issue is having show login as false after everything is rendered */}
-                {/* {this.state.showLogin ?
+                {this.state.showLogin ?
                 <div className="loginForm">
                   <h1>Welcome</h1>
                   <button onClick={this.anon}>Log In Anon</button>
                   {this.state.user ? <button onClick={this.logout}>Log Out</button> : <button onClick={this.login}>Log In</button>}
 
                   </div> 
-                  : null} */}
+                  : null}
 
-                {this.state.showLogin ? <Login /> : null}
+                {/* {this.state.showLogin ? <Login /> : null} */}
                 
                 <Route
                   exact
@@ -235,13 +235,14 @@ class App extends Component {
                 />
 
                 <Route path="/login" component={Login} />
-
+                {this.state.showButton ?
                 <nav className="buttonDiv">
                   <Link className="button back" to={this.handleBackButton} onClick={this.props.updateRender}>Back</Link>
 
                   {/* <NextButton currentFormInputs={this.state} /> */}
                   <Link className="button" to={this.handleNextButton} onClick={this.props.updateRender}>Next</Link>
                 </nav>
+                : null}
               </div>
             </Router>
 
