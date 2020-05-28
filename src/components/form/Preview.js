@@ -107,7 +107,7 @@ class Preview extends Component {
             <h2 className={this.state.color}>
               Hello I'm {firstName} {lastName}!
             </h2>
-            <h3 className={this.state.color}>My website is comming soon!</h3>
+            <h3 className={this.state.color}>My website is coming soon!</h3>
             <h4 className={this.state.color}>{subtitle}</h4>
             <ul>
               <li className={this.state.twitterHidden}>
