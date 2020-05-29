@@ -196,17 +196,15 @@ class App extends Component {
                 {/* {this.state.showLogin ? <Login /> : null} */}
                 
                 <Route
-                  exact
                   path="/Application"
-                  render={(props) => (
+                  render={props => (
                     <About formInputs={this.formParamInputs} {...props} />
                   )}
                 />
 
                 <Route
-                  exact
                   path="/about"
-                  render={(props) => (
+                  render={props => (
                     <About
                       formInputs={this.formParamInputs}
                       globalState={this.state}
@@ -217,21 +215,21 @@ class App extends Component {
 
                 <Route
                   path="/styles"
-                  render={(props) => (
+                  render={props => (
                     <StyleOptions styleInputs={this.styleParamInputs} {...props} />
                   )}
                 />
 
                 <Route
                   path="/preview"
-                  render={(props) => (
+                  render={props => (
                     <Preview previewInputs={this.state} {...props} />
                   )}
                 />
 
                 <Route
                   path="/codeCopy"
-                  render={(props) => <PasteCode formInputs={this.state} {...props} />}
+                  render={props => <PasteCode formInputs={this.state} {...props} />}
                 />
 
                 <Route path="/login" component={Login} />
