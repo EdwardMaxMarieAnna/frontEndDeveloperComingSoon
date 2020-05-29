@@ -240,7 +240,11 @@ class App extends Component {
                   <Link className="button back" to={this.handleBackButton} onClick={this.props.updateRender}>Back</Link>
 
                   {/* <NextButton currentFormInputs={this.state} /> */}
-                  <Link className="button" to={this.handleNextButton} onClick={this.props.updateRender}>Next</Link>
+                  {/* removing from the last page, but it doesn't render again so hmmm*/}
+                    {window.location.pathname === '/codeCopy'
+                    ? null
+                    :<Link className="button" to={this.handleNextButton} onClick={this.props.updateRender}>Next</Link>
+                  }
                 </nav>
                 : null}
               </div>
