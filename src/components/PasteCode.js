@@ -13,6 +13,7 @@ class PasteCode extends Component {
             firstName: props.formInputs.firstName,
             font: props.formInputs.font,
             lastName: props.formInputs.lastName,
+            instagram: props.formInputs.instagram,
             linkedIn: props.formInputs.linkedIn,
             github: props.formInputs.github,
             other: props.formInputs.other,
@@ -56,12 +57,13 @@ class PasteCode extends Component {
         const backSplash = (this.state.color === 'orange' || this.state.color === 'yellow') ? `rgba(223, 172, 17, 0.59);` : `rgba(255, 255, 255, 0.3);`
         
         // Append the twitter with personal link  or placeholder to the soon to be developer on where to place it
-        const linkedIn = (this.state.linkedIn !== '') ? ` <li><a href=https://www.linkedin.com/in/${this.state.linkedIn}><i class="fab fa-linkedin-in"></i></a></li>` : `<!-- Enter your LinkedIn here when you do find it! -->`
-        const twitter = (this.state.twitter !== '') ? ` <li><a href=https://twitter.com/${this.state.twitter}><i class="fab fa-twitter"></i></a></li>` : `<!-- Enter your twitter here when you do find it! -->`
-        const instagram = (this.state.other !== '') ? ` <li><a href=https://www.instagram.com/${this.state.other}><i class="fab fa-instagram"></i></a></li>` : `<!-- Enter your instagram here when you do find it! -->`
-        const github = (this.state.github !== '') ? ` <li><a href=https://www.github.com/${this.state.github}><i class="fab fa-github"></i></a></li>` : `<!-- Enter your github here so people can see your work! -->`
-        const email = (this.state.email !== '') ? ` <li><a href="mailto: ${this.state.email}"><i class="far fa-envelope"></i></a></li>` : ``
-        const blog = (this.state.blog !== '') ? ` <li><a href=${this.state.github}><i class="fab fa-blogger-b"></i></a></li>` : `<!-- Enter your blog here so people can read your work! -->`
+        const linkedIn = (this.state.linkedIn !== '') ? ` <li><a href='https://www.linkedin.com/in/${this.state.linkedIn}' aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a></li>` : `<!-- Enter your LinkedIn here when you do find it! -->`
+        const twitter = (this.state.twitter !== '') ? ` <li><a href='https://twitter.com/${this.state.twitter}' aria-label="Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a></li>` : `<!-- Enter your twitter here when you do find it! -->`
+        const instagram = (this.state.instagram !== '') ? ` <li><a href='https://www.instagram.com/${this.state.instagram}' aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>` : `<!-- Enter your instagram here when you do find it! -->`
+        const github = (this.state.github !== '') ? ` <li><a href='https://www.github.com/${this.state.github}' aria-label="Github" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a></li>` : `<!-- Enter your github here so people can see your work! -->`
+        const email = (this.state.email !== '') ? ` <li><a href="mailto: ${this.state.email}" aria-label="Email" target="_blank" rel="noopener noreferrer"><i class="far fa-envelope"></i></a></li>` : ``
+        const blog = (this.state.blog !== '') ? ` <li><a href='${this.state.blog}' aria-label="Blog" target="_blank" rel="noopener noreferrer"><i class="fab fa-blogger-b"></i></a></li>` : `<!-- Enter your blog here so people can read your work! -->`
+        const other = (this.state.other !== '') ? ` <li><a href='${this.state.other}' aria-label="Other website" target="_blank" rel="noopener noreferrer"><i class="fas fa-code"></i></a></li>` : ``
 
         const backgroundImage = (this.state.backgroundSelected !== '') ? `background-image:url("${this.state.backgroundSelected}");
     background-repeat: no-repeat;
@@ -84,7 +86,7 @@ class PasteCode extends Component {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Incoming New Developer!</title>
-    <script src="https://kit.fontawesome.com/c6324a7f25.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a0242aabdf.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     ${fontLink}
 </head>
@@ -102,6 +104,7 @@ class PasteCode extends Component {
                     ${github}
                     ${email}
                     ${blog}
+                    ${other}
                 </ul>
             </div>
         </div>

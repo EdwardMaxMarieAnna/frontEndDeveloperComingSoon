@@ -151,11 +151,11 @@ export class StyleOptions extends Component {
                             id=""
                         >
                             <option defaultChecked="checked" value="empty"></option>
-                            <option value="alegreya">Algreya</option>
+                            <option value="Alegreya">Algreya</option>
                             <option value="B612">B612</option>
-                            <option value="muli">Muli</option>
-                            <option value="titillium">Titillium Web</option>
-                            <option value="varela">Varela</ option>
+                            <option value="Muli">Muli</option>
+                            <option value="Titillium">Titillium Web</option>
+                            <option value="Varela">Varela</ option>
                         </select>
                     </div>
                     <div>
