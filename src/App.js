@@ -9,6 +9,7 @@ import StyleOptions from "./StyleOptions.js";
 import Login from "./Login.js";
 import './App.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { withRouter } from 'react-router-dom';
 import firebase from './firebase.js';
 
 const provider = new firebase.auth.GoogleAuthProvider();
@@ -119,12 +120,12 @@ class App extends Component {
         this.setState({ user });
       }
     });
-    if (window.location.pathname === '/about' || window.location.pathname === '/styles' || window.location.pathname === '/preview' || window.location.pathname === '/codeCopy') {
+    if (window.location.pathname === '/frontEndDeveloperComingSoon/about' || window.location.pathname === '/frontEndDeveloperComingSoon/styles' || window.location.pathname === '/frontEndDeveloperComingSoon/preview' || window.location.pathname === '/frontEndDeveloperComingSoon/codeCopy') {
       this.setState({
         showLogin: false
       })
     }
-    if (window.location.pathname === '/about' || window.location.pathname === '/styles' || window.location.pathname === '/preview' || window.location.pathname === '/codeCopy') {
+    if (window.location.pathname === '/frontEndDeveloperComingSoon/about' || window.location.pathname === '/frontEndDeveloperComingSoon/styles' || window.location.pathname === '/frontEndDeveloperComingSoon/preview' || window.location.pathname === '/frontEndDeveloperComingSoon/codeCopy') {
       this.setState({
         showButton:true
       })
@@ -169,6 +170,7 @@ class App extends Component {
     //This breaks anon login. Runs faster than server leaving for now as it is needed to work app
 
     window.location.pathname = '/frontEndDeveloperComingSoon/about'
+    // this.props.history.push("/frontEndDeveloperComingSoon/about")
   }
   
   render() {
