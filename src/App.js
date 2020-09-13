@@ -9,6 +9,9 @@ import StyleOptions from "./StyleOptions.js";
 import Login from "./Login.js";
 import './App.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+import { HashRouter } from 'react-router-dom'
+
 import firebase from './firebase.js';
 import createHistory from 'history/createBrowserHistory';
 export const history = createHistory();
@@ -182,7 +185,7 @@ class App extends Component {
           logedIn: false,
           showLogin: true,
         })
-        window.location.pathname = '/frontEndDeveloperComingSoon';
+        window.location.pathname = '/frontEndDeveloperComingSoon/';
       });
   }
 
@@ -203,20 +206,20 @@ class App extends Component {
     setTimeout(() => {
       // this.props.history.push("/frontEndDeveloperComingSoon/about")
       history.push('/frontEndDeveloperComingSoon/about')
-      // window.location.reload()
+      window.location.reload()
 
     }, 1000)
   }
   
   render() {
     return (
-      <Router history={history}>
+      <HashRouter history={history}>
       <div className="mainContent wrapper">
         <div className="mainGrid">
         <Header />
 
 
-            <Router>
+            {/* <Router> */}
             
               <div className="formContainer">
 
@@ -279,14 +282,14 @@ class App extends Component {
                 </nav>
                 : null}
               </div>
-            </Router>
+            {/* </Router> */}
 
 
         {/* <Form updateRender={this.updateRender}/> */}
         </div>
         <Footer />
       </div>
-      </Router>
+      </HashRouter>
     )
   }
 }
