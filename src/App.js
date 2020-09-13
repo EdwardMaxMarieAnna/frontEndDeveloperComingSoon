@@ -191,9 +191,7 @@ class App extends Component {
                   {this.state.user ? <button onClick={this.logout}>Log Out</button> : <button onClick={this.login}>Log In</button>}
 
                   </div> 
-                  : null}
-
-                {/* {this.state.showLogin ? <Login /> : null} */}
+                  : null} 
                 
                 <Route
                   exact
