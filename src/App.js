@@ -9,8 +9,9 @@ import StyleOptions from "./StyleOptions.js";
 import Login from "./Login.js";
 import './App.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { withRouter } from 'react-router-dom';
 import firebase from './firebase.js';
+import createHistory from 'history/createBrowserHistory';
+export const history = createHistory();
 
 const provider = new firebase.auth.GoogleAuthProvider();
 const auth = firebase.auth();
@@ -169,13 +170,18 @@ class App extends Component {
   
     //This breaks anon login. Runs faster than server leaving for now as it is needed to work app
 
-    window.location.pathname = '/frontEndDeveloperComingSoon/about'
-    // this.props.history.push("/frontEndDeveloperComingSoon/about")
+    // window.location.pathname = '/frontEndDeveloperComingSoon/about'
+
+    setTimeout(() => {
+      // this.props.history.push("/frontEndDeveloperComingSoon/about")
+      history.push('/frontEndDeveloperComingSoon/about')
+
+    }, 1000)
   }
   
   render() {
     return (
-      <Router>
+      <Router history={history}>
       <div className="mainContent wrapper">
         <div className="mainGrid">
         <Header />
