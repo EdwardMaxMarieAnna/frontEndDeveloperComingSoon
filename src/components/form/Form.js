@@ -161,7 +161,6 @@
 // }
 
 // export default Form;
-=======
 import React, { Component } from 'react';
 import Preview from './Preview.js'
 import PasteCode from '../PasteCode'
