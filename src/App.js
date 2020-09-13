@@ -112,7 +112,7 @@ class App extends Component {
 
     updateRender = () => {
     // Force a render without state change
-    // this.forceUpdate();
+    this.forceUpdate();
   }
 
   componentDidMount() {
@@ -121,12 +121,12 @@ class App extends Component {
         this.setState({ user });
       }
     });
-    if (window.location.pathname === '/frontEndDeveloperComingSoon/about' || window.location.pathname === '/frontEndDeveloperComingSoon/styles' || window.location.pathname === '/frontEndDeveloperComingSoon/preview' || window.location.pathname === '/frontEndDeveloperComingSoon/codeCopy') {
+    if (window.location.pathname === '/about' || window.location.pathname === '/styles' || window.location.pathname === '/preview' || window.location.pathname === '/codeCopy') {
       this.setState({
         showLogin: false
       })
     }
-    if (window.location.pathname === '/frontEndDeveloperComingSoon/about' || window.location.pathname === '/frontEndDeveloperComingSoon/styles' || window.location.pathname === '/frontEndDeveloperComingSoon/preview' || window.location.pathname === '/frontEndDeveloperComingSoon/codeCopy') {
+    if (window.location.pathname === '/about' || window.location.pathname === '/styles' || window.location.pathname === '/preview' || window.location.pathname === '/codeCopy') {
       this.setState({
         showButton:true
       })
@@ -174,8 +174,8 @@ class App extends Component {
 
     setTimeout(() => {
       // this.props.history.push("/frontEndDeveloperComingSoon/about")
-      history.push('/frontEndDeveloperComingSoon/about')
-
+      history.push('/about')
+      window.location.reload()
     }, 1000)
   }
   
@@ -203,7 +203,7 @@ class App extends Component {
                 
                 <Route
                   exact
-                  path="/frontEndDeveloperComingSoon/Application"
+                  path="/Application"
                   render={(props) => (
                     <About formInputs={this.formParamInputs} {...props} />
                   )}
@@ -211,7 +211,7 @@ class App extends Component {
 
                 <Route
                   exact
-                  path="/frontEndDeveloperComingSoon/about"
+                  path="/about"
                   render={(props) => (
                     <About
                       formInputs={this.formParamInputs}
@@ -222,21 +222,21 @@ class App extends Component {
                 />
 
                 <Route
-                  path="/frontEndDeveloperComingSoon/styles"
+                  path="/styles"
                   render={(props) => (
                     <StyleOptions styleInputs={this.styleParamInputs} {...props} />
                   )}
                 />
 
                 <Route
-                  path="/frontEndDeveloperComingSoon/preview"
+                  path="/preview"
                   render={(props) => (
                     <Preview previewInputs={this.state} {...props} />
                   )}
                 />
 
                 <Route
-                  path="/frontEndDeveloperComingSoon/codeCopy"
+                  path="/codeCopy"
                   render={(props) => <PasteCode formInputs={this.state} {...props} />}
                 />
 
