@@ -234,7 +234,7 @@ class App extends Component {
                   : null} 
                 
                 <Route
-                  exact
+                  
                   path="/frontEndDeveloperComingSoon/Application"
                   render={(props) => (
                     <About formInputs={this.formParamInputs} {...props} />
@@ -242,7 +242,7 @@ class App extends Component {
                 />
 
                 <Route
-                  exact
+                  
                   path="/frontEndDeveloperComingSoon/#/about"
                   render={(props) => (
                     <About
