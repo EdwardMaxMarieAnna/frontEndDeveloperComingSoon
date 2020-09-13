@@ -152,7 +152,7 @@ class App extends Component {
           logedIn: false,
           showLogin: true,
         })
-        window.location.pathname = '/';
+        window.location.pathname = '/frontEndDeveloperComingSoon';
       });
   }
 
@@ -195,7 +195,7 @@ class App extends Component {
                 
                 <Route
                   exact
-                  path="/Application"
+                  path="/frontEndDeveloperComingSoon/Application"
                   render={(props) => (
                     <About formInputs={this.formParamInputs} {...props} />
                   )}
@@ -203,7 +203,7 @@ class App extends Component {
 
                 <Route
                   exact
-                  path="/about"
+                  path="/frontEndDeveloperComingSoon/about"
                   render={(props) => (
                     <About
                       formInputs={this.formParamInputs}
@@ -214,21 +214,21 @@ class App extends Component {
                 />
 
                 <Route
-                  path="/styles"
+                  path="/frontEndDeveloperComingSoon/styles"
                   render={(props) => (
                     <StyleOptions styleInputs={this.styleParamInputs} {...props} />
                   )}
                 />
 
                 <Route
-                  path="/preview"
+                  path="/frontEndDeveloperComingSoon/preview"
                   render={(props) => (
                     <Preview previewInputs={this.state} {...props} />
                   )}
                 />
 
                 <Route
-                  path="/codeCopy"
+                  path="/frontEndDeveloperComingSoon/codeCopy"
                   render={(props) => <PasteCode formInputs={this.state} {...props} />}
                 />
 

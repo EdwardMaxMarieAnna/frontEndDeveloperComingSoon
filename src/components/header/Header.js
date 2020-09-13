@@ -7,7 +7,7 @@ function Header() {
     console.log(window)
     console.log(window.location.pathname)
     let where = window.location.pathname;
-    if (where === '/' || where === '/login') {
+    if (where === '/frontEndDeveloperComingSoon' || where === '/login') {
         return (
             <header>
                 <div className="titleContainer">
@@ -24,7 +24,7 @@ function Header() {
                 </div>
             </header>
         )
-    } else if (where !== '/') {
+    } else if (where !== '/frontEndDeveloperComingSoon') {
         return (
             <header>
                 <div className="titleContainer">
