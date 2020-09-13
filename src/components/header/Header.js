@@ -7,7 +7,7 @@ function Header() {
     console.log(window)
     console.log(window.location.pathname)
     let where = window.location.pathname;
-    if (where === '/' || where === '/login') {
+    if (where === '/frontEndDeveloperComingSoon/' || where === '/login') {
         return (
             <header>
                 <div className="titleContainer">
