@@ -205,7 +205,7 @@ class App extends Component {
 
     setTimeout(() => {
       // this.props.history.push("/frontEndDeveloperComingSoon/about")
-      history.push('/frontEndDeveloperComingSoon/about')
+      history.push('#/about')
       window.location.reload()
 
     }, 1000)
@@ -243,7 +243,7 @@ class App extends Component {
 
                 <Route
                   
-                  path="/frontEndDeveloperComingSoon/about"
+                  path="#/about"
                   render={(props) => (
                     <About
                       formInputs={this.formParamInputs}
