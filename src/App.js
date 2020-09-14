@@ -173,7 +173,7 @@ class App extends Component {
   
     //This breaks anon login. Runs faster than server leaving for now as it is needed to work app
 
-    window.location.pathname = '/about'
+    window.location.pathname = '/frontEndDeveloperComingSoon/about'
 
     
 
@@ -218,7 +218,7 @@ class App extends Component {
 
                 <Route
                   exact
-                  path="/about"
+                  path="/frontEndDeveloperComingSoon/about"
                   render={(props) => (
                     <About
                       formInputs={this.formParamInputs}
