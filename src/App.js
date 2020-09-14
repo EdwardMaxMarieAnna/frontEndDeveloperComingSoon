@@ -178,7 +178,7 @@ class App extends Component {
     setTimeout(() => {
       // this.props.history.push("/frontEndDeveloperComingSoon/about")
       history.push('/frontEndDeveloperComingSoon/about')
-      window.location.reload()
+      // window.location.reload()
 
     }, 1000)
   }
