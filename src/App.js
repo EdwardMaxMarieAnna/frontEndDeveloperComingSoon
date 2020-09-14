@@ -81,8 +81,8 @@ class App extends Component {
 
       //removed login page from if loop as it breaks in live. Works locally.
       let nextTo = '';
-      if (page === '/about') {
-        return nextTo = '/styles'
+      if (page === '/frontEndDeveloperComingSoon/about') {
+        return nextTo = '/frontEndDeveloperComingSoon/styles'
       } else if (page === '/styles') {
         return nextTo = '/preview'
       } else if (page === '/preview') {
@@ -173,19 +173,22 @@ class App extends Component {
   
     //This breaks anon login. Runs faster than server leaving for now as it is needed to work app
 
-    // window.location.pathname = '/frontEndDeveloperComingSoon/about'
+    window.location.pathname = '/frontEndDeveloperComingSoon/about'
+
+    
 
     setTimeout(() => {
       // this.props.history.push("/frontEndDeveloperComingSoon/about")
-      history.push('/frontEndDeveloperComingSoon/about')
+      // history.push('/frontEndDeveloperComingSoon/about')
       // window.location.reload()
 
     }, 1000)
   }
+
   
   render() {
     return (
-      <Router history={history}>
+      <Router basename={process.env.PUBLIC_URL} history={history}>
       <div className="mainContent wrapper">
         <div className="mainGrid">
         <Header />
