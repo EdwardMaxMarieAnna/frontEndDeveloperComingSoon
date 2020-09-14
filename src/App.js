@@ -152,12 +152,12 @@ class App extends Component {
         this.setState({ user });
       }
     });
-    if (window.location.pathname === '/frontEndDeveloperComingSoon/about' || window.location.pathname === '/frontEndDeveloperComingSoon/styles' || window.location.pathname === '/frontEndDeveloperComingSoon/preview' || window.location.pathname === '/frontEndDeveloperComingSoon/codeCopy') {
+    if (window.location.pathname === '#/about' || window.location.pathname === '/frontEndDeveloperComingSoon/styles' || window.location.pathname === '/frontEndDeveloperComingSoon/preview' || window.location.pathname === '/frontEndDeveloperComingSoon/codeCopy') {
       this.setState({
         showLogin: false
       })
     }
-    if (window.location.pathname === '/frontEndDeveloperComingSoon/about' || window.location.pathname === '/frontEndDeveloperComingSoon/styles' || window.location.pathname === '/frontEndDeveloperComingSoon/preview' || window.location.pathname === '/frontEndDeveloperComingSoon/codeCopy') {
+    if (window.location.pathname === '#/about' || window.location.pathname === '/frontEndDeveloperComingSoon/styles' || window.location.pathname === '/frontEndDeveloperComingSoon/preview' || window.location.pathname === '/frontEndDeveloperComingSoon/codeCopy') {
       this.setState({
         showButton:true
       })
